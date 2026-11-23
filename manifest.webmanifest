@@ -1,0 +1,16 @@
+{
+  "name": "학과별 취업 생존력 티어표",
+  "short_name": "학과 티어",
+  "description": "학과별 취업 생존력을 S~D 티어로 보고, 과를 누르면 이유를 알려 주는 앱",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
