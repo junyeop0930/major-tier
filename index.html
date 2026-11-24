@@ -147,6 +147,79 @@ h2{font:900 clamp(22px,2.6vw,28px)/1.25 "Noto Sans KR",sans-serif;margin:0 0 16p
 .nav button:disabled{opacity:.35;cursor:default}
 .small{font-size:13px;color:var(--soft);margin:0}
 .small a{color:var(--soft);text-underline-offset:2px}
+/* 관심 과·탭·비교 */
+.chip .hf{display:none;width:13px;height:13px;color:var(--S)}
+.chip.fav .hf{display:block}
+.hx{display:flex;gap:8px;align-items:center}
+.hrt{display:inline-flex;align-items:center;gap:6px;height:44px;padding:0 14px;border:0;border-radius:12px;background:var(--panel);color:var(--ink);font-size:15px;font-weight:700;cursor:pointer;transition:transform 120ms var(--ease-out)}
+.hrt svg.i{width:20px;height:20px}
+.hrt[aria-pressed=true]{background:color-mix(in srgb,var(--S) 16%,var(--bg));color:var(--down)}
+.hrt:active{transform:scale(.96)}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:0 20px 12px;padding:4px;border-radius:12px;background:var(--panel)}
+.tabs button{min-height:40px;border:0;border-radius:9px;background:none;color:var(--soft);font-size:15px;font-weight:700;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--bg);color:var(--ink);box-shadow:0 1px 3px rgb(0 0 0/.12)}
+.flags{display:flex;flex-wrap:wrap;gap:6px}
+.flags span{padding:4px 11px;border-radius:999px;font-size:14px;font-weight:700;background:var(--panel2)}
+.dots{columns:2 150px;column-gap:20px}
+.parts{margin:0;display:grid;gap:10px}.parts dt{font-weight:700}.parts dd{margin:2px 0 0;color:var(--soft);font-size:15px}
+.cfs{display:grid;gap:8px}
+.cf{display:grid;gap:2px;text-align:left;padding:12px 14px;border:0;border-radius:12px;background:var(--panel);color:var(--ink);font-size:15px;cursor:pointer}
+.cf span{color:var(--soft);font-size:14px}
+.dock{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:5;display:flex;gap:6px;padding:6px;border-radius:18px;background:var(--ink);box-shadow:0 10px 30px rgb(0 0 0/.25)}
+.dock[hidden]{display:none}
+.dock button{display:inline-flex;align-items:center;gap:7px;min-height:46px;padding:0 16px;border:0;border-radius:13px;background:none;color:var(--bg);font-size:15px;font-weight:700;cursor:pointer;white-space:nowrap}
+.dock button:first-child{background:color-mix(in srgb,var(--bg) 14%,var(--ink))}
+.dock svg.i{width:18px;height:18px}
+.dock #dockl svg{color:var(--S)}
+.dock b{min-width:22px;height:22px;padding:0 6px;border-radius:11px;background:var(--S);color:#121216;font-size:13px;display:inline-grid;place-items:center}
+.dock button:disabled{opacity:.4}
+.dock button:active{transform:scale(.97)}
+.lh{background:color-mix(in srgb,var(--S) 18%,var(--bg));color:var(--down)}.lh svg.i{width:30px;height:30px}
+.ls,.fr{display:grid;gap:6px}
+.lr{display:flex;align-items:center;gap:6px;padding:4px;border-radius:14px;background:var(--panel)}
+.pk{width:44px;height:44px;flex:none;border:0;background:none;display:grid;place-items:center;cursor:pointer}
+.ck{width:24px;height:24px;border-radius:50%;box-shadow:inset 0 0 0 2px var(--soft);display:grid;place-items:center;color:#fff}
+.pk[aria-pressed=true] .ck{background:var(--ink);box-shadow:none;color:var(--bg)}
+.ck svg.i{width:16px;height:16px}
+.ln{flex:1;display:flex;align-items:center;gap:10px;min-height:48px;border:0;background:none;color:var(--ink);text-align:left;cursor:pointer;padding:4px 0}
+.lt{display:grid}.lt span{font-size:13px;color:var(--soft)}
+.rm,.add{flex:none;height:40px;border:0;border-radius:10px;background:var(--bg);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:4px;padding:0 10px;font-size:14px;font-weight:700}
+.rm{width:40px;justify-content:center}.rm svg.i{width:16px;height:16px}.add svg.i{width:16px;height:16px;color:var(--down)}
+.fr h5{margin:8px 0 2px;font-size:14px}.fr h5 span{color:var(--soft);font-weight:500}
+.ghost{justify-self:start;margin-top:6px;border:0;background:none;color:var(--soft);font-size:14px;text-decoration:underline;cursor:pointer;min-height:40px}
+.empty{padding:20px;border-radius:14px;background:var(--panel);margin:0}
+.acts{display:grid;gap:8px}
+.pri,.sec{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border:0;border-radius:14px;font-size:16px;font-weight:700;cursor:pointer;transition:transform 120ms var(--ease-out)}
+.pri{background:var(--ink);color:var(--bg)}.sec{background:var(--panel);color:var(--ink)}
+.pri:disabled,.sec:disabled{opacity:.4;cursor:default}
+.pri:not(:disabled):active,.sec:not(:disabled):active{transform:scale(.98)}
+.pri svg.i,.sec svg.i{width:20px;height:20px}
+.cp{width:100%;margin-top:6px;font:14px "Noto Sans KR",sans-serif;padding:10px;border:0;border-radius:10px;background:var(--panel);color:var(--ink)}
+.back{width:44px;height:44px;border:0;border-radius:12px;background:var(--panel);color:var(--ink);display:grid;place-items:center;cursor:pointer}.back svg.i{width:20px;height:20px}
+.ctop{position:sticky;top:76px;z-index:1;display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:8px;padding:0 20px 10px;background:var(--bg)}
+.cname{display:flex;align-items:center;gap:8px;min-height:48px;padding:6px 10px;border:0;border-radius:12px;background:var(--panel);color:var(--ink);text-align:left;font-size:15px;cursor:pointer}
+.cmp{gap:0}
+.crow{padding:12px 0}
+.crow+.crow{box-shadow:0 -1px 0 var(--panel2)}
+.crow h5{margin:0 0 8px;font-size:13px;color:var(--soft);font-weight:700;display:flex;gap:6px;align-items:center}
+.crow h5 span{font-weight:500;font-size:12px;padding:1px 7px;border-radius:999px;background:var(--panel)}
+.cells{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:8px;font-size:15px;line-height:1.45}
+.cells ul{margin:0;padding-left:1.1em;columns:auto}
+.cells b{font-size:14px}
+.mini{display:block;height:10px;border-radius:5px;background:var(--panel2);overflow:hidden;margin:4px 0}.mini i{display:block;height:100%;border-radius:5px}
+.cmp.diff .crow.same{display:none}
+.sw{display:flex;align-items:center;gap:10px;min-height:44px;font-weight:700;cursor:pointer;margin-bottom:4px}
+.sw input{position:absolute;opacity:0;width:1px;height:1px}
+.sw span{width:44px;height:26px;border-radius:13px;background:var(--panel2);position:relative;transition:background-color 150ms}
+.sw span::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgb(0 0 0/.3);transition:transform 180ms var(--ease-out)}
+.sw input:checked+span{background:var(--C)}.sw input:checked+span::after{transform:translateX(18px)}
+.sw input:focus-visible+span{outline:3px solid var(--A);outline-offset:2px}
+.hrt:focus-visible,.tabs button:focus-visible,.pk:focus-visible,.ln:focus-visible,.rm:focus-visible,.add:focus-visible,.pri:focus-visible,.sec:focus-visible,.cf:focus-visible,.cname:focus-visible,.back:focus-visible,.dock button:focus-visible{outline:3px solid var(--A);outline-offset:2px}
+body{padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+.sheet.on~.dock{display:none}
+.body[hidden]{display:none}
+.cname b{min-width:0;overflow-wrap:anywhere;line-height:1.25}
+@media(max-width:600px){.tabs{margin:0 16px 10px}.ctop{padding:0 16px 10px;top:70px;gap:6px}.cname{padding:6px 8px;gap:6px;font-size:14px}.cname .hb-t{width:24px;height:24px;font-size:15px;flex:none}.cells{gap:6px;font-size:14px}}
 @media(max-width:820px){.two{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:600px){
  .chip{font-size:15px;min-height:44px;padding:0 10px 0 12px}
@@ -175,7 +248,12 @@ h2{font:900 clamp(22px,2.6vw,28px)/1.25 "Noto Sans KR",sans-serif;margin:0 0 16p
  <symbol id="prev" viewBox="0 0 20 20"><path d="M12.5 4.5 7 10l5.5 5.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
  <symbol id="next" viewBox="0 0 20 20"><path d="M7.5 4.5 13 10l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
  <symbol id="search" viewBox="0 0 20 20"><circle cx="8.5" cy="8.5" r="5.75" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="m13 13 4.5 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
- <symbol id="info"viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor"/><rect x="10.8" y="10" width="2.4" height="8" rx="1.2" fill="#fff"/><circle cx="12" cy="6.8" r="1.5" fill="#fff"/></symbol>
+ <symbol id="heart" viewBox="0 0 20 20"><path d="M10 16.6S3.4 12.6 3.4 7.9A3.4 3.4 0 0 1 10 6.4a3.4 3.4 0 0 1 6.6 1.5c0 4.7-6.6 8.7-6.6 8.7z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+ <symbol id="heartf" viewBox="0 0 20 20"><path d="M10 16.6S3.4 12.6 3.4 7.9A3.4 3.4 0 0 1 10 6.4a3.4 3.4 0 0 1 6.6 1.5c0 4.7-6.6 8.7-6.6 8.7z" fill="currentColor" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+ <symbol id="check" viewBox="0 0 20 20"><path d="m5 10.5 3.2 3.2L15 6.8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="cols" viewBox="0 0 20 20"><rect x="3" y="4" width="6" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.9"/><rect x="11" y="4" width="6" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.9"/></symbol>
+ <symbol id="share" viewBox="0 0 20 20"><path d="M10 12.5V3.5M6.5 7 10 3.5 13.5 7M4.5 11v4.2c0 .7.6 1.3 1.3 1.3h8.4c.7 0 1.3-.6 1.3-1.3V11" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor"/><rect x="10.8" y="10" width="2.4" height="8" rx="1.2" fill="#fff"/><circle cx="12" cy="6.8" r="1.5" fill="#fff"/></symbol>
 </svg>
 
 <header class="band" style="padding-bottom:16px"><div class="wrap">
@@ -225,7 +303,11 @@ h2{font:900 clamp(22px,2.6vw,28px)/1.25 "Noto Sans KR",sans-serif;margin:0 0 16p
 <footer class="band foot"><div class="wrap">진로를 정할 때 참고하는 자료예요. 대학·전형별 실제 취업률은 대학알리미에서 학과 이름으로 찾아볼 수 있어요.</div></footer>
 
 <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="dname" aria-hidden="true">
-  <div class="card" id="card"></div>
+  <div class="card" id="card" tabindex="-1"></div>
+</div>
+<div class="dock" id="dock" hidden>
+  <button type="button" id="dockl"><svg class="i" aria-hidden="true"><use href="#heartf"/></svg>내 관심 과 <b id="dockn">0</b></button>
+  <button type="button" id="dockc"><svg class="i" aria-hidden="true"><use href="#cols"/></svg>나란히 보기</button>
 </div>
 
 <script>
@@ -264,83 +346,83 @@ const TIERS = [
 
 const MAJORS = [
   // ===== S =====
-  {id:"medicine",name:"의예",group:"의약",tier:"S",trend:"flat",one:"면허 하나로 평생 가는 길",score:{job:5,safe:5,pay:5,future:4},why:["의약 계열 취업률 79.4%, 7개 계열 중 1위(교육부·2025)","의사 면허는 평생 쓰는 자격이라 경기를 덜 탐","2027학년도 의대 정원 490명 늘어남(뉴시스·2026)","지역의사전형은 졸업 뒤 지역에서 10년 일해야 함"],risk:"공부 기간이 길고(6년+수련) 입시 경쟁이 가장 셈",tip:"지역의사전형은 10년 근무 조건을 꼭 확인",paths:["병원 전문의","개원의","의학 연구자","제약·바이오 회사"],src:[0,3],alias:["의대","의학","의예과","의사","의학과","의과대학"]},
-  {id:"dentistry",name:"치의예",group:"의약",tier:"S",trend:"flat",one:"면허 안정성은 의대급",score:{job:5,safe:5,pay:5,future:3},why:["의약 계열 취업률 79.4%, 가장 높은 계열(교육부·2025)","치과의사 면허로 개원과 병원 근무 둘 다 가능","의대보다 수련 부담이 적고 바로 개원도 가능","도시는 치과가 많아 개원 경쟁이 센 편"],risk:"도시 개원 경쟁이 세고 개원 비용이 큼",tip:"교정·임플란트 등 전문 분야를 일찍 정하기",paths:["치과 개원","치과병원 근무","교정·구강외과 전문의","공중보건의"],src:[0],alias:["치대","치의학","치과의사"]},
+  {id:"medicine",name:"의예",group:"의약",tier:"S",trend:"flat",one:"면허 하나로 평생 가는 길",score:{job:5,safe:5,pay:5,future:4},why:["의사 면허는 평생 쓰는 자격이라 경기를 덜 탐","2027학년도 의대 정원 490명 늘어남(뉴시스·2026)","지역의사전형은 졸업 뒤 지역에서 10년 일해야 함"],risk:"공부 기간이 길고(6년+수련) 입시 경쟁이 가장 셈",tip:"지역의사전형은 10년 근무 조건을 꼭 확인",paths:["병원 전문의","개원의","의학 연구자","제약·바이오 회사"],src:[0,3],alias:["의대","의학","의예과","의사","의학과","의과대학"],learn:["해부학·생리학","병리학·약리학","내과·외과 등 임상 실습","의료윤리"],hs:["생명과학","화학","세포와 물질대사","생물의 유전"],hard:"오랜 기간 암기와 시험을 버티기 힘든 사람",math:"low",grad:false,license:true},
+  {id:"dentistry",name:"치의예",group:"의약",tier:"S",trend:"flat",one:"면허 안정성은 의대급",score:{job:5,safe:5,pay:5,future:3},why:["치과의사 면허로 개원과 병원 근무 둘 다 가능","의대보다 수련 부담이 적고 바로 개원도 가능","도시는 치과가 많아 개원 경쟁이 센 편"],risk:"도시 개원 경쟁이 세고 개원 비용이 큼",tip:"교정·임플란트 등 전문 분야를 일찍 정하기",paths:["치과 개원","치과병원 근무","교정·구강외과 전문의","공중보건의"],src:[0],alias:["치대","치의학","치과의사"],learn:["구강해부학","치주학·보존학","보철학","구강외과 실습"],hs:["생명과학","화학","물질과 에너지"],hard:"손으로 하는 정밀한 작업이 답답한 사람",math:"low",grad:false,license:true},
 
   // ===== A =====
-  {id:"pharmacy",name:"약학",group:"의약",tier:"A",trend:"flat",one:"면허는 든든, 약국 경쟁은 세짐",score:{job:5,safe:5,pay:4,future:3},why:["의약 계열 취업률 79.4%(교육부·2025)","약사 면허로 약국·병원·제약사 등 갈 곳이 많음","6년제 졸업생이 해마다 나와 약국 경쟁이 세짐","제약·바이오 회사의 연구·허가 일도 있음"],risk:"동네 약국이 이미 많아 개업 경쟁이 셈",tip:"병원약사·제약 연구 등 약국 밖 길도 알아 두기",paths:["약국 약사","병원 약사","제약회사(연구·허가)","약무직 공무원"],src:[0],alias:["약대","약학과","약사","제약"]},
-  {id:"kmedicine",name:"한의예",group:"의약",tier:"A",trend:"down",one:"면허는 있지만 개원 포화",score:{job:4,safe:5,pay:4,future:2},why:["의약 계열 취업률 79.4%(교육부·2025)","한의사 면허로 개원하는 것이 주된 길","한의원이 많아 개원 경쟁이 셈","건강보험이 되는 진료가 적어 수입 차이가 큼"],risk:"개원 포화, 지역과 사람에 따라 수입 차이 큼",tip:"재활·통증 등 특화 진료를 준비하기",paths:["한의원 개원","한방병원","공중보건의","한약·건강식품 회사"],src:[0],alias:["한의대","한의학","한의사","한의","한의예과","한약","한약학"]},
-  {id:"veterinary",name:"수의예",group:"의약",tier:"A",trend:"up",one:"반려동물 늘며 수요 증가",score:{job:4,safe:5,pay:4,future:4},why:["의약 계열 취업률 79.4%(교육부·2025)","수의사 면허가 있어야 하는 일이라 안정적","반려동물 키우는 집이 늘며 동물병원 수요 증가","가축 방역·검역 같은 공무원 길도 있음"],risk:"6년 공부, 도시는 동물병원 개원 경쟁이 셈",tip:"동물병원 말고 방역·검역 공무원도 함께 보기",paths:["동물병원","방역·검역 공무원","제약·사료 회사","연구소"],src:[0],alias:["수의대","수의학","수의사","동물병원","수의","수의예과","동물"]},
-  {id:"nursing",name:"간호",group:"의약",tier:"A",trend:"flat",one:"취업은 확실, 근무는 고됨",score:{job:5,safe:5,pay:3,future:4},why:["의약 계열 취업률 79.4%(교육부·2025)","2026년 간호사 국시 합격자 2만5092명(국시원·2026)","2026학년도 간호대 정원 2만4883명, 동결(데일리메디·2026)","최근 큰 병원 신규 채용이 줄어 경쟁이 세짐"],risk:"교대 근무가 힘들고 그만두는 사람이 많은 편",tip:"성적·실습 관리로 큰 병원 지원을 준비",paths:["병원 간호사","보건교사","보건직 공무원","해외 간호사"],src:[0,4,5],alias:["간호학","간호학과","간호대","간호사"]},
-  {id:"semiconductor",name:"전자·반도체",group:"공학",tier:"A",trend:"up",one:"사람이 모자란 분야",score:{job:4,safe:3,pay:5,future:5},why:["공학 계열 취업률 70.4%(교육부·2025)","2031년 반도체 인력 최대 8만1000명 부족 전망(전자신문·2026)","감사원은 정부 인력 전망에 빠진 수요가 있다고 지적(2025)","대기업과 계약학과가 많아 취업 연결이 쉬운 편"],risk:"반도체 경기는 좋을 때와 나쁠 때 차이가 큼",tip:"회로·공정 중 한 분야를 깊게, 대학원도 고려",paths:["반도체 회사(설계·공정)","전자·가전 회사","장비·소재 회사","대학원 연구"],contract:true,src:[0,6,7],alias:["전자공학","전자","반도체","반도체공학","전자전기","시스템반도체","디스플레이","전자통신","통신공학","전자정보","전자재료","반도체시스템","전파"]},
-  {id:"electrical",name:"전기",group:"공학",tier:"A",trend:"up",one:"전력망·데이터센터로 수요 증가",score:{job:4,safe:4,pay:4,future:5},why:["공학 계열 취업률 70.4%(교육부·2025)","건설사들이 원전·데이터센터 분야 신입을 뽑음(머니투데이·2026)","전기기사 자격증으로 공기업·건설사 지원 가능","전력 공기업이 많이 뽑는 전공"],risk:"현장 근무와 지방 근무가 많은 편",tip:"전기기사 자격증을 졸업 전에 따기",paths:["전력 공기업","건설·플랜트 회사","반도체·데이터센터 설비","전기직 공무원"],src:[0,14],alias:["전기공학","전기전자","전기","전력","에너지전기","전기제어","전기정보","전력시스템","제어계측"]},
-  {id:"naval",name:"조선해양",group:"공학",tier:"A",trend:"up",one:"배 주문 늘며 다시 뜨는 중",score:{job:4,safe:3,pay:4,future:4},why:["공학 계열 취업률 70.4%(교육부·2025)","배 주문이 늘며 조선소 일감이 많아짐","배를 설계하는 일은 전공자만 할 수 있는 편","일터가 거제·울산 같은 바닷가에 몰려 있음"],risk:"호황과 불황이 몇 년 단위로 크게 바뀜",tip:"선박 설계·해양플랜트 중 관심 분야 정하기",paths:["조선소(설계·생산)","해양플랜트","선박 검사기관","해양 공기업"],src:[0],alias:["조선","조선공학","해양공학","선박","조선해양공학"]},
-  {id:"mechanical",name:"기계·로봇",group:"공학",tier:"A",trend:"flat",one:"어디든 갈 수 있는 기본 공학",score:{job:4,safe:4,pay:4,future:3},why:["공학 계열 취업률 70.4%(교육부·2025)","자동차·로봇·플랜트 등 갈 수 있는 회사가 넓음","일반기계기사 자격증으로 공기업도 지원 가능","범위가 넓어 다른 공학과 섞기 좋음"],risk:"역학 과목이 많고 어려운 편",tip:"로봇·모빌리티 등 한 분야 프로젝트를 해 두기",paths:["자동차·조선 회사","로봇·장비 회사","에너지 공기업","설계 엔지니어"],src:[0],alias:["기계공학","기계","기계설계","로봇","메카트로닉스","기계공학부","기계시스템","기계자동차","자동화","제어","로봇공학","스마트기계","지능로봇"]},
-  {id:"aerospace",name:"항공우주",group:"공학",tier:"A",trend:"up",one:"방산·우주 바람에 채용 늘어",score:{job:4,safe:3,pay:4,future:5},why:["공학 계열 취업률 70.4%(교육부·2025)","LIG넥스원 2026 상반기 세 자릿수 공채(아시아경제·2026)","2026 우주항공 연구개발 예산 9495억 원, 4.5% 늘어(뉴시스·2026)"],risk:"방산은 나라 예산·수출 계약에 따라 흔들림",tip:"방산·항공기·위성 중 관심 분야를 일찍 정하기",paths:["방산 회사(연구·설계)","항공기·엔진 회사","위성·우주 기업","연구소·공기업"],src:[0,17,18],alias:["항공우주공학","우주공학","방산","항공기계","항공공학","항공정비","드론","무인기"]},
-  {id:"nuclear",name:"원자력·에너지",group:"공학",tier:"A",trend:"up",one:"원전 수출·작은 원전(SMR)으로 다시 뜨는 중",score:{job:4,safe:4,pay:4,future:4},why:["공학 계열 취업률 70.4%(교육부·2025)","원전 공기업 4곳 정원 2만2929명, 4년 만에 늘어(매일경제·2026)","대형원전 2기 계획대로 건설, 작은 원전(SMR) 상용화 추진(뉴시스·2026)","건설사가 원전 분야 신입을 따로 뽑음(머니투데이·2026)"],risk:"나라 에너지 정책이 바뀌면 분위기도 바뀜",tip:"원자력·전기 자격증과 공기업 시험을 함께 준비",paths:["원전 공기업","원전 설계·건설사","작은 원전(SMR) 기업","원자력 안전 기관"],src:[0,15,16,14],alias:["원자력공학","원자핵공학","에너지공학","원전","SMR","에너지시스템","에너지","핵공학","핵융합"]},
-  {id:"mobility",name:"자동차·모빌리티",group:"공학",tier:"A",trend:"flat",one:"전기차·자율주행으로 바뀌는 중",score:{job:4,safe:3,pay:4,future:4},why:["공학 계열 취업률 70.4%(교육부·2025)","현대차그룹 2026년 약 1만 명 채용 계획, 1년 새 3000명 늘려(뉴시스·2026)","엔진보다 배터리·소프트웨어 실력을 더 찾는 흐름","완성차·부품사·연구소로 갈 곳이 넓음"],risk:"엔진 부품 쪽은 전기차 전환으로 일이 줄 수 있음",tip:"차량 소프트웨어·배터리 중 하나를 깊게 배우기",paths:["완성차 회사","자동차 부품사","자율주행·자동차 전자장치 회사","연구소"],src:[0,19],alias:["자동차공학","미래자동차","모빌리티","미래차","자율주행","스마트모빌리티","자동차","전기자동차","자동차정비","자동차IT"]},
+  {id:"pharmacy",name:"약학",group:"의약",tier:"A",trend:"flat",one:"면허는 든든, 약국 경쟁은 세짐",score:{job:5,safe:5,pay:4,future:3},why:["약사 면허로 약국·병원·제약사 등 갈 곳이 많음","6년제 졸업생이 해마다 나와 약국 경쟁이 세짐","제약·바이오 회사의 연구·허가 일도 있음"],risk:"동네 약국이 이미 많아 개업 경쟁이 셈",tip:"병원약사·제약 연구 등 약국 밖 길도 알아 두기",paths:["약국 약사","병원 약사","제약회사(연구·허가)","약무직 공무원"],src:[0],alias:["약대","약학과","약사","제약"],learn:["약리학·약물학","약화학","약제학","생화학"],hs:["화학","화학 반응의 세계","생명과학","세포와 물질대사"],hard:"화학·생화학 암기량을 부담스러워하는 사람",math:"low",grad:false,license:true},
+  {id:"kmedicine",name:"한의예",group:"의약",tier:"A",trend:"down",one:"면허는 있지만 개원 포화",score:{job:4,safe:5,pay:4,future:2},why:["한의사 면허로 개원하는 것이 주된 길","한의원이 많아 개원 경쟁이 셈","건강보험이 되는 진료가 적어 수입 차이가 큼"],risk:"개원 포화, 지역과 사람에 따라 수입 차이 큼",tip:"재활·통증 등 특화 진료를 준비하기",paths:["한의원 개원","한방병원","공중보건의","한약·건강식품 회사"],src:[0],alias:["한의대","한의학","한의사","한의","한의예과","한약","한약학"],learn:["한의학 원리(한방생리·병리)","본초학·방제학","침구학","한방 내과·진단"],hs:["생명과학","화학","세포와 물질대사"],hard:"한자·옛 의학 용어 공부가 어려운 사람",math:"low",grad:false,license:true},
+  {id:"veterinary",name:"수의예",group:"의약",tier:"A",trend:"up",one:"반려동물 늘며 수요 증가",score:{job:4,safe:5,pay:4,future:4},why:["수의사 면허가 있어야 하는 일","반려동물 키우는 집이 늘며 동물병원 수요 증가","가축 방역·검역 같은 공무원 길도 있음"],risk:"6년 공부, 도시는 동물병원 개원 경쟁이 셈",tip:"동물병원 말고 방역·검역 공무원도 함께 보기",paths:["동물병원","방역·검역 공무원","제약·사료 회사","연구소"],src:[0],alias:["수의대","수의학","수의사","동물병원","수의","수의예과","동물"],learn:["동물해부학·생리학","수의병리학","수의약리학","임상 실습(소동물·대동물)"],hs:["생명과학","화학","생물의 유전","세포와 물질대사"],hard:"동물의 아픔과 죽음을 마주하기 힘든 사람",math:"low",grad:false,license:true},
+  {id:"nursing",name:"간호",group:"의약",tier:"A",trend:"flat",one:"취업은 확실, 근무는 고됨",score:{job:5,safe:5,pay:3,future:4},why:["2026년 간호사 국시 합격자 2만5092명(국시원·2026)","2026학년도 간호대 정원 2만4883명, 동결(데일리메디·2026)","최근 큰 병원 신규 채용이 줄어 경쟁이 세짐"],risk:"교대 근무가 힘들고 그만두는 사람이 많은 편",tip:"성적·실습 관리로 큰 병원 지원을 준비",paths:["병원 간호사","보건교사","보건직 공무원","해외 간호사"],src:[0,4,5],alias:["간호학","간호학과","간호대","간호사"],learn:["기본간호학","성인·여성·아동 간호학","해부생리학","병원 임상 실습"],hs:["생명과학","세포와 물질대사","화학"],hard:"교대 근무와 체력 소모가 부담스러운 사람",math:"low",grad:false,license:true},
+  {id:"semiconductor",name:"전자·반도체",group:"공학",tier:"A",trend:"up",one:"사람이 모자란 분야",score:{job:4,safe:3,pay:5,future:5},why:["2031년 반도체 인력 최대 8만1000명 부족 전망(전자신문·2026)","감사원은 정부 인력 전망에 빠진 수요가 있다고 지적(2025)","대기업과 계약학과가 많아 취업 연결이 쉬운 편"],risk:"반도체 경기는 좋을 때와 나쁠 때 차이가 큼",tip:"회로·공정 중 한 분야를 깊게, 대학원도 고려",paths:["반도체 회사(설계·공정)","전자·가전 회사","장비·소재 회사","대학원 연구"],contract:true,src:[0,6,7],alias:["전자공학","전자","반도체","반도체공학","전자전기","시스템반도체","디스플레이","전자통신","통신공학","전자정보","전자재료","반도체시스템","전파"],learn:["반도체 소자·물성","회로이론·전자기학","디지털·아날로그 회로","반도체 공정"],hs:["미적분Ⅰ","미적분Ⅱ","물리학","전자기와 양자"],hard:"물리·수학을 한 번에 같이 오래 하기 싫은 사람",math:"high",grad:true,license:false},
+  {id:"electrical",name:"전기",group:"공학",tier:"A",trend:"up",one:"전력망·데이터센터로 수요 증가",score:{job:4,safe:4,pay:4,future:5},why:["건설사들이 원전·데이터센터 분야 신입을 뽑음(머니투데이·2026)","전기기사 자격증으로 공기업·건설사 지원 가능","전력 공기업이 많이 뽑는 전공"],risk:"현장 근무와 지방 근무가 많은 편",tip:"전기기사 자격증을 졸업 전에 따기",paths:["전력 공기업","건설·플랜트 회사","반도체·데이터센터 설비","전기직 공무원"],src:[0,14],alias:["전기공학","전기전자","전기","전력","에너지전기","전기제어","전기정보","전력시스템","제어계측"],learn:["회로이론","전자기학","전력계통·전기기기","제어공학"],hs:["미적분Ⅰ","미적분Ⅱ","물리학","전자기와 양자"],hard:"눈에 안 보이는 전기 개념이 막연한 사람",math:"high",grad:false,license:false},
+  {id:"naval",name:"조선해양",group:"공학",tier:"A",trend:"up",one:"배 주문 늘며 다시 뜨는 중",score:{job:4,safe:3,pay:4,future:4},why:["배 주문이 늘며 조선소 일감이 많아짐","배를 설계하는 일은 전공자만 할 수 있는 편","일터가 거제·울산 같은 바닷가에 몰려 있음"],risk:"호황과 불황이 몇 년 단위로 크게 바뀜",tip:"선박 설계·해양플랜트 중 관심 분야 정하기",paths:["조선소(설계·생산)","해양플랜트","선박 검사기관","해양 공기업"],src:[0],alias:["조선","조선공학","해양공학","선박","조선해양공학"],learn:["선박 유체역학","선체 구조·강도","선박 설계","해양 플랜트"],hs:["미적분Ⅰ","물리학","역학과 에너지"],hard:"바닷가 지역에서 일하기 싫은 사람",math:"high",grad:false,license:false},
+  {id:"mechanical",name:"기계·로봇",group:"공학",tier:"A",trend:"flat",one:"어디든 갈 수 있는 기본 공학",score:{job:4,safe:4,pay:4,future:3},why:["자동차·로봇·플랜트 등 갈 수 있는 회사가 넓음","일반기계기사 자격증으로 공기업도 지원 가능","범위가 넓어 다른 공학과 섞기 좋음"],risk:"역학 과목이 많고 어려운 편",tip:"로봇·모빌리티 등 한 분야 프로젝트를 해 두기",paths:["자동차·조선 회사","로봇·장비 회사","에너지 공기업","설계 엔지니어"],src:[0],alias:["기계공학","기계","기계설계","로봇","메카트로닉스","기계공학부","기계시스템","기계자동차","자동화","제어","로봇공학","스마트기계","지능로봇"],learn:["열역학","유체역학","재료역학","기계 설계·제어"],hs:["미적분Ⅰ","물리학","역학과 에너지","기하"],hard:"계산과 설계를 반복하는 일이 지루한 사람",math:"high",grad:false,license:false},
+  {id:"aerospace",name:"항공우주",group:"공학",tier:"A",trend:"up",one:"방산·우주 바람에 채용 늘어",score:{job:4,safe:3,pay:4,future:5},why:["LIG넥스원 2026 상반기 세 자릿수 공채(아시아경제·2026)","2026 우주항공 연구개발 예산 9495억 원, 4.5% 늘어(뉴시스·2026)","연구소·방산 업체 중심이라 일하는 곳이 한정된 편"],risk:"방산은 나라 예산·수출 계약에 따라 흔들림",tip:"방산·항공기·위성 중 관심 분야를 일찍 정하기",paths:["방산 회사(연구·설계)","항공기·엔진 회사","위성·우주 기업","연구소·공기업"],src:[0,17,18],alias:["항공우주공학","우주공학","방산","항공기계","항공공학","항공정비","드론","무인기"],learn:["항공역학","추진·엔진 공학","비행 제어","항공 구조·재료"],hs:["미적분Ⅰ","미적분Ⅱ","물리학","역학과 에너지"],hard:"역학 계산을 끈기 있게 못 하는 사람",math:"high",grad:true,license:false},
+  {id:"nuclear",name:"원자력·에너지",group:"공학",tier:"A",trend:"up",one:"원전 수출·작은 원전(SMR)으로 다시 뜨는 중",score:{job:4,safe:4,pay:4,future:4},why:["원전 공기업 4곳 정원 2만2929명, 4년 만에 늘어(매일경제·2026)","대형원전 2기 계획대로 건설, 작은 원전(SMR) 상용화 추진(뉴시스·2026)","건설사가 원전 분야 신입을 따로 뽑음(머니투데이·2026)"],risk:"나라 에너지 정책이 바뀌면 분위기도 바뀜",tip:"원자력·전기 자격증과 공기업 시험을 함께 준비",paths:["원전 공기업","원전 설계·건설사","작은 원전(SMR) 기업","원자력 안전 기관"],src:[0,15,16,14],alias:["원자력공학","원자핵공학","에너지공학","원전","SMR","에너지시스템","에너지","핵공학","핵융합"],learn:["원자핵물리","원자로 이론·열수력","방사선 안전","에너지 시스템"],hs:["미적분Ⅰ","물리학","전자기와 양자","화학"],hard:"방사선·안전 규정을 꼼꼼히 따르기 싫은 사람",math:"high",grad:true,license:false},
+  {id:"mobility",name:"자동차·모빌리티",group:"공학",tier:"A",trend:"flat",one:"전기차·자율주행으로 바뀌는 중",score:{job:4,safe:3,pay:4,future:4},why:["현대차그룹 2026년 약 1만 명 채용 계획, 1년 새 3000명 늘려(뉴시스·2026)","엔진보다 배터리·소프트웨어 실력을 더 찾는 흐름","완성차·부품사·연구소로 갈 곳이 넓음"],risk:"엔진 부품 쪽은 전기차 전환으로 일이 줄 수 있음",tip:"차량 소프트웨어·배터리 중 하나를 깊게 배우기",paths:["완성차 회사","자동차 부품사","자율주행·자동차 전자장치 회사","연구소"],src:[0,19],alias:["자동차공학","미래자동차","모빌리티","미래차","자율주행","스마트모빌리티","자동차","전기자동차","자동차정비","자동차IT"],learn:["자동차 구조·동역학","전기차·배터리","제어·임베디드","자율주행 기초"],hs:["미적분Ⅰ","물리학","역학과 에너지","정보"],hard:"기계와 소프트웨어를 함께 배우기 싫은 사람",math:"mid",grad:false,license:false},
 
   // ===== B =====
-  {id:"cs",name:"컴퓨터공학",group:"공학",tier:"B",trend:"down",one:"실력은 통하지만 신입 문이 좁아짐",score:{job:3,safe:2,pay:4,future:4},why:["공학 계열 취업률 70.4%(교육부·2025)","채용하는 기업 82%가 경력만 원함(대한상의 분석·2025)","AI가 코드 일부를 짜며 신입 개발 일이 줄어듦","실력이 있으면 업종 상관없이 일할 수 있음"],risk:"인기 학과라 졸업생이 많고 신입 경쟁이 셈",tip:"수업 밖에서 직접 만든 프로그램을 남기기",paths:["IT 회사 개발자","금융·대기업 전산직","AI·데이터 대학원","창업"],src:[0,13],alias:["컴공","컴퓨터","컴퓨터공학과","소프트웨어","SW","컴퓨터과학","개발자","코딩","정보통신","정보통신공학","전산","전산학","IT","컴퓨터공학부","컴퓨터정보","소프트웨어공학","소프트웨어학부","정보시스템","멀티미디어공학"]},
-  {id:"ai",name:"AI·소프트웨어",group:"공학",tier:"B",trend:"up",one:"뜨는 분야, 학부만으론 부족",score:{job:3,safe:2,pay:4,future:5},why:["공학 계열 취업률 70.4%(교육부·2025)","AI를 쓰는 회사는 늘지만 개발은 석·박사 위주","새로 생긴 학과가 많아 졸업생 자료가 아직 적음","수학 기초가 약하면 따라가기 어려움"],risk:"학부 졸업만으로 AI 연구직은 어려움",tip:"수학·통계를 탄탄히, 대학원까지 생각하기",paths:["AI·데이터 회사","대학원 연구","일반 회사 데이터 분석","IT 개발자"],src:[0],alias:["인공지능","AI","AI학과","인공지능학과","AI융합","소프트웨어융합","지능정보","머신러닝","디지털콘텐츠","지능형시스템"]},
-  {id:"health",name:"물리치료·임상병리",group:"의약",tier:"B",trend:"flat",one:"면허로 취업, 월급은 보통",score:{job:4,safe:5,pay:2,future:3},why:["의약 계열 취업률 79.4%(교육부·2025)","물리치료사·임상병리사 등 국가 면허가 있어야 함","나이 든 인구가 늘며 병원·요양 수요도 늘어남","월급이 오르는 폭은 작은 편"],risk:"전문대 졸업생과 같은 면허로 경쟁함",tip:"면허에 도수치료·검사장비 같은 전문 경력 더하기",paths:["병원 물리치료실","병원·센터 검사실","요양·재활 시설","보건직 공무원"],src:[0],alias:["물리치료","물리치료학","물리치료사","임상병리","임상병리학","임상병리사","보건","안경광학","안경","의료경영","병원경영","보건행정","보건관리","의료정보","보건의료행정"]},
-  {id:"industrial",name:"산업공학",group:"공학",tier:"B",trend:"flat",one:"공장과 데이터를 잇는 공학",score:{job:3,safe:2,pay:4,future:3},why:["공학 계열 취업률 70.4%(교육부·2025)","공장·물류가 일하는 방식을 효율적으로 바꾸는 학문","데이터 분석·기획·컨설팅으로 많이 감","기술 하나를 깊게보다 넓게 배우는 편"],risk:"넓게 배워서 \"무엇을 잘하나\"가 흐릴 수 있음",tip:"코딩·통계로 데이터 분석 실력을 함께 키우기",paths:["제조·물류 기획","데이터 분석가","컨설팅 회사","공기업"],src:[0],alias:["산업공학과","산업경영공학","산업시스템","경영공학","스마트팩토리","산업경영","시스템경영","산업안전","안전공학","안전보건"]},
-  {id:"chemical",name:"화학공학",group:"공학",tier:"B",trend:"down",one:"석유화학 불황, 다른 길은 있음",score:{job:3,safe:3,pay:4,future:2},why:["공학 계열 취업률 70.4%(교육부·2025)","석유화학 업계가 불황이라 채용이 줄어듦","반도체·배터리·바이오 공정으로도 갈 수 있음","화공기사 자격으로 공기업·플랜트 지원 가능"],risk:"석유화학 경기가 언제 나아질지 모름",tip:"반도체·바이오 등 다른 공정 분야도 같이 보기",paths:["석유화학 회사","반도체·배터리 공정","바이오·제약 생산","환경·에너지 공기업"],src:[0],alias:["화공","화학공학과","화학생명공학","석유화학","배터리공정","응용화학","공업화학","화공생명","화공생명공학","정밀화학","고분자공학"]},
-  {id:"materials",name:"신소재·재료",group:"공학",tier:"B",trend:"down",one:"배터리 채용이 크게 줄어듦",score:{job:3,safe:2,pay:4,future:3},why:["공학 계열 취업률 70.4%(교육부·2025)","배터리 3사 신규 채용, 2022년보다 64.2% 줄어(CEO스코어·2025)","반도체 소재·부품 쪽으로도 갈 수 있음","연구직은 석·박사를 많이 뽑음"],risk:"배터리 경기에 따라 채용이 크게 흔들림",tip:"반도체 소재 등 여러 산업에 맞는 실력 키우기",paths:["배터리·소재 회사","반도체 소재·부품","철강·금속 회사","대학원 연구"],contract:true,src:[0,8],alias:["신소재공학","재료공학","금속","소재","배터리","재료","섬유공학","고분자","세라믹","나노소재","나노","나노과학","반도체소재","첨단소재","신소재"]},
-  {id:"civil",name:"토목·건설",group:"공학",tier:"B",trend:"down",one:"건설 불황, 공기업이 버팀목",score:{job:3,safe:4,pay:3,future:2},why:["공학 계열 취업률 70.4%(교육부·2025)","건설 불황으로 대형 건설사 직원이 1년 새 줄어듦(더팩트·2025)","토목기사 자격으로 공기업·공무원 길이 넓음","도로·철도·수도 같은 나라 공사는 계속 있음"],risk:"건설 경기에 크게 흔들리고 현장 근무가 많음",tip:"토목기사 따고 공기업·공무원 시험 같이 준비",paths:["도로·철도 공기업","토목직 공무원","건설사","설계·감리 회사"],src:[0,9],alias:["토목공학","건설환경","건설","사회기반시스템","토목환경","건설공학","건설시스템","토목건설","토목"]},
-  {id:"math",name:"수학·통계",group:"자연",tier:"B",trend:"up",one:"데이터 시대의 기초 체력",score:{job:3,safe:2,pay:4,future:4},why:["자연 계열 취업률 65.4%(교육부·2025)","데이터 분석과 AI의 바탕이 되는 학문","금융·보험사의 분석·계리 일로도 감","공부한 만큼 여러 분야로 넓힐 수 있음"],risk:"전공만으론 할 일이 안 보여 진로 고민이 길어짐",tip:"파이썬 같은 코딩과 통계 프로그램 함께 익히기",paths:["데이터 분석가","보험계리사","금융회사","수학 교사·대학원"],src:[0],alias:["수학","수학과","통계","통계학","응용수학","수리","계리","수리통계","정보통계","응용통계","금융수학","계리학","수리과학"]},
-  {id:"business",name:"경영·회계",group:"사회",tier:"B",trend:"flat",one:"어느 회사에나 필요한 전공",score:{job:3,safe:3,pay:4,future:3},why:["사회 계열 취업률 69.0%(교육부·2025)","기획·재무·마케팅처럼 어느 회사에나 있는 일","회계사·세무사 시험을 보면 전문직 길도 있음","졸업생이 많아 같은 과끼리 경쟁이 셈"],risk:"전공 특색이 약해 스펙 경쟁이 심함",tip:"회계·데이터 등 내 무기 한 가지를 정하기",paths:["기업 기획·재무·마케팅","회계사·세무사","은행·증권사","창업"],src:[0],alias:["경영","경영학","회계","회계학","경영학과","마케팅","상경","경영정보","경영정보학","경영학부","글로벌경영","창업","유통경영","벤처경영"]},
-  {id:"economics",name:"경제",group:"사회",tier:"B",trend:"flat",one:"숫자 다루는 사회 계열",score:{job:3,safe:2,pay:4,future:3},why:["사회 계열 취업률 69.0%(교육부·2025)","금융·공기업·연구소처럼 숫자 다루는 일로 감","통계·수학을 많이 써서 데이터 일과도 이어짐","깊게 하려면 대학원(박사)이 필요"],risk:"배운 이론이 회사 실무와 거리가 있음",tip:"통계·코딩을 함께 배워 분석 실력 보여 주기",paths:["은행·증권·보험","공기업·경제 공무원","경제 연구소","데이터 분석"],src:[0],alias:["경제학","경제학과","경제","금융경제","경제학부","경제금융","경제통상","응용경제","자원경제"]},
-  {id:"security",name:"정보보안",group:"공학",tier:"B",trend:"flat",one:"꼭 필요하지만 신입 문은 좁음",score:{job:2,safe:3,pay:4,future:4},why:["공학 계열 취업률 70.4%(교육부·2025)","보안 신입 공고 552건→252건, 3년 새 절반 아래(파이낸셜뉴스·2026)","보안 공고의 96%가 경력직(파이낸셜뉴스·2026)","해킹 사고가 잦아 경력자 수요는 꾸준함"],risk:"경력직 위주라 첫 직장 잡기가 어려움",tip:"정보보안기사와 해킹 대회 경험으로 실력 보여 주기",paths:["보안 전문 회사","기업·금융 보안팀","공공기관 보안","보안 연구원"],src:[0,20],alias:["정보보호","사이버보안","해킹","보안공학","융합보안","화이트해커"]},
-  {id:"datasci",name:"데이터사이언스",group:"공학",tier:"B",trend:"flat",one:"어디서나 쓰지만 경력을 원함",score:{job:3,safe:2,pay:4,future:4},why:["공학 계열 취업률 70.4%(교육부·2025)","채용하는 기업 82%가 경력만 원함(대한상의 분석·2025)","금융·유통·제조 어디서나 데이터 분석을 씀","새로 생긴 학과가 많아 졸업생 자료가 적음"],risk:"AI가 단순 분석 일을 대신하기 시작",tip:"통계·코딩에 한 업종 지식을 더해 두기",paths:["데이터 분석가","데이터 엔지니어","AI·데이터 대학원","기업 기획·마케팅 분석"],src:[0,13],alias:["데이터과학","빅데이터","데이터","통계데이터","데이터분석"]},
-  {id:"biomed",name:"의공학·바이오공학",group:"공학",tier:"B",trend:"up",one:"바이오 수출 늘며 길이 넓어짐",score:{job:3,safe:2,pay:4,future:4},why:["공학 계열 취업률 70.4%(교육부·2025)","2025 바이오헬스 수출 279억 달러, 역대 최대(헤럴드경제·2026)","의료기기·제약 생산·품질관리로 학사도 감","연구직은 석·박사를 많이 뽑음"],risk:"학사만으로 연구 개발 일은 어려움",tip:"의료기기 허가·품질 같은 실무 수업 들어 두기",paths:["의료기기 회사","바이오·제약 생산","병원 의공팀","대학원 연구"],src:[0,22],alias:["의공학","바이오공학","생명공학","의료공학","바이오메디컬","바이오의공학","의료기기","의용공학","생체공학","의료IT","바이오","바이오헬스","제약공학","바이오제약"]},
-  {id:"environment",name:"환경공학",group:"공학",tier:"B",trend:"flat",one:"공기업·공무원 길이 넓은 편",score:{job:3,safe:3,pay:3,future:3},why:["공학 계열 취업률 70.4%(교육부·2025)","물·대기·폐기물 관리는 나라가 계속 해야 하는 일","환경기사 자격으로 공기업·환경직 공무원 지원 가능","탄소 배출 관리 같은 새 일도 생기는 중"],risk:"민간 회사 월급은 다른 공학보다 낮은 편",tip:"수질·대기환경기사 자격증을 졸업 전에 따기",paths:["환경 공기업","환경직 공무원","환경 컨설팅 회사","기업 환경안전팀"],src:[0],alias:["환경공학","환경에너지","환경학","기후","탄소중립","환경보건","환경","환경과학","환경생명공학","신재생에너지","에너지환경","대기환경","수질"]},
-  {id:"healthlic",name:"치위생·방사선·작업치료",group:"의약",tier:"B",trend:"flat",one:"면허로 취업, 월급은 보통",score:{job:4,safe:5,pay:2,future:3},why:["의약 계열 취업률 79.4%(교육부·2025)","치과위생사·방사선사·작업치료사 모두 국가 면허","나이 든 인구가 늘며 병원·재활 수요도 늘어남","월급이 오르는 폭은 작은 편"],risk:"전문대 졸업생과 같은 면허로 경쟁함",tip:"면허에 장비·재활 같은 전문 경력 더하기",paths:["치과 병·의원","병원 영상의학과","재활병원·치매센터","보건직 공무원"],src:[0],alias:["치위생","치위생학","치과위생사","방사선","방사선학","방사선사","작업치료","작업치료사","재활","언어재활","언어치료","치기공","치기공학","청능재활"]},
-  {id:"emt",name:"응급구조",group:"의약",tier:"B",trend:"up",one:"소방 구급대원으로 이어지는 길",score:{job:3,safe:4,pay:2,future:4},why:["의약 계열 취업률 79.4%(교육부·2025)","1급 응급구조사 면허로 소방 구급 경력채용 지원 가능","2026 소방공무원 2891명 선발, 1년 새 964명 늘어(뉴시스·2026)"],risk:"체력 부담이 크고 밤샘 근무가 많음",tip:"1급 응급구조사 따고 소방 체력시험 미리 준비",paths:["소방 구급대원","병원 응급실","민간 구급차·항공 이송","산업 현장 안전"],src:[0,28],alias:["응급구조학","응급구조사","응급의료","구급","파라메딕"]},
-  {id:"police",name:"경찰행정·소방",group:"사회",tier:"B",trend:"up",one:"경찰·소방 채용이 늘어난 편",score:{job:3,safe:4,pay:3,future:3},why:["사회 계열 취업률 69.0%(교육부·2025)","2026 경찰 6608명 채용, 1년 새 990명 늘어(한국경제·2026)","2026 소방공무원 2891명 선발, 1년 새 964명 늘어(뉴시스·2026)","경찰행정학과 전용 경력채용 길이 있음"],risk:"시험은 전공과 상관없이 누구나 봐서 경쟁이 셈",tip:"체력시험을 일찍 준비하고 학과 전용 채용 조건 확인",paths:["경찰공무원","소방공무원","교정·보호 공무원","기업 보안·안전"],src:[0,27,28],alias:["경찰행정","경찰학","경찰","소방","소방행정","소방안전","경호","교정","해양경찰","해경","소방방재","재난안전","방재","경찰행정학","소방학","소방공무원","사이버수사"]},
-  {id:"finance",name:"금융·세무",group:"사회",tier:"B",trend:"flat",one:"자격증 따면 길이 넓어짐",score:{job:3,safe:3,pay:4,future:3},why:["사회 계열 취업률 69.0%(교육부·2025)","4대 은행 하반기 공채 645명, 2년 새 205명 줄어(CEO스코어·2025)","세무사 시험 최소 합격 700명, 8년째 같음(택스워치·2026)","회계·세무 자격이 있으면 갈 곳이 넓음"],risk:"은행 창구 일은 디지털로 계속 줄어듦",tip:"세무·회계 자격증이나 데이터 분석 실력 더하기",paths:["은행·증권·보험","세무사·회계사","기업 재무·세무팀","세무직 공무원"],src:[0,30,31],alias:["금융","금융학","세무","세무학","보험","재무","핀테크","회계세무","금융보험","금융투자","자산운용","세무회계"]},
-  {id:"trade",name:"국제통상·무역",group:"사회",tier:"B",trend:"up",one:"수출 늘며 무역 일도 늘어",score:{job:3,safe:2,pay:4,future:3},why:["사회 계열 취업률 69.0%(교육부·2025)","2025 수출 7097억 달러, 역대 최대(뉴시스·2026)","해외영업·물류·무역 회사로 많이 감","외국어 실력이 함께 있으면 힘이 큼"],risk:"세계 경기·관세 같은 바깥 사건에 흔들림",tip:"외국어 하나와 무역 실무 자격증 함께 준비",paths:["해외영업","무역·물류 회사","무역 공기업","관세사·관세직 공무원"],src:[0,29],alias:["국제통상","무역","무역학","국제무역","통상","국제경영","물류","글로벌비즈니스","관세","항만물류","유통","국제물류"]},
-  {id:"military",name:"군사학",group:"사회",tier:"B",trend:"flat",one:"졸업하면 장교가 되는 길",score:{job:4,safe:4,pay:2,future:2},why:["사회 계열 취업률 69.0%(교육부·2025)","군과 협약한 학과는 졸업 뒤 장교가 됨","새로 장교가 된 육군 인원 4860명→3710명(2021→2025년, 세계일보·2025)","10~20년 차 간부 희망전역 960명→1821명(2021→2024년, 세계일보·2025)"],risk:"의무 복무 기간이 있고 지방 근무가 많음",tip:"의무 복무 기간과 장학 조건을 꼭 확인",paths:["장교(육·해·공군)","군무원","방산 회사","경찰·공무원"],contract:true,src:[0,34],alias:["국방","장교","사관학교","육군사관학교","군사"]},
-  {id:"specialedu",name:"특수교육",group:"교육",tier:"B",trend:"up",one:"교사 중 드물게 선발이 늘어",score:{job:3,safe:4,pay:3,future:4},why:["교육 계열 취업률 71.1%(교육부·2025)","2027 특수교사 1056명 선발 예고, 1년 새 181명 늘어(머니투데이·2026)","다른 교과 교사는 선발이 줄어드는 흐름","특수교육이 필요한 학생은 줄지 않는 편"],risk:"학생마다 필요한 도움이 달라 일이 고됨",tip:"봉사·실습으로 특수학교 현장을 먼저 겪어 보기",paths:["특수교사(유·초·중등)","특수학교·복지관","장애인 고용·재활 기관","치료·교육 센터"],src:[0,23],alias:["특수교육학","특수교사","특수교육과","유아특수교육","중등특수교육","특수","장애"]},
-  {id:"pilot",name:"항공운항(조종)",group:"공학",tier:"B",trend:"flat",one:"월급은 높고 비용·시간도 큼",score:{job:3,safe:3,pay:5,future:3},why:["공학 계열 취업률 70.4%(교육부·2025)","조종사 면허와 비행 시간을 채워야 항공사에 감","비행 훈련 비용이 많이 드는 편"],risk:"시력·건강 기준이 있고 항공 경기에 흔들림",tip:"신체검사 기준과 훈련 비용부터 확인",paths:["항공사 조종사","공군 조종사","항공 교관","항공 운항 관리"],src:[0],alias:["항공운항","조종","조종사","파일럿","비행","항공운항학"]},
-  {id:"cosmetic",name:"화장품·향장과학",group:"자연",tier:"B",trend:"up",one:"K뷰티 수출 늘며 연구·품질 수요",score:{job:3,safe:2,pay:3,future:4},why:["자연 계열 취업률 65.4%(교육부·2025)","2025 화장품 수출 114억 달러, 11.8% 늘어 역대 최대(뉴시스·2026)","화장품 책임판매업체 2만8412곳으로 1년 새 553곳 늘고, 제조업체는 4158곳(코스모닝·2026)","연구직은 대학원 출신이 많은 편이고, 학사는 품질·생산·허가 업무로 많이 감"],risk:"수출 비중이 커서 해외 시장에 따라 흔들릴 수 있음",tip:"화학·피부 기초 수업과 맞춤형화장품조제관리사 같은 자격을 함께 준비",paths:["화장품 회사 연구·품질관리","화장품 제조(OEM·ODM) 회사","브랜드 상품기획·허가 업무","대학원 연구"],src:[0,40,43],alias:["향장","화장품","화장품과학","코스메틱","화장품공학","향장학","화장품학","코스메슈티컬","뷰티사이언스","바이오코스메틱","화장품생명","향료","향장과학","뷰티화장품"]},
+  {id:"cs",name:"컴퓨터공학",group:"공학",tier:"B",trend:"down",one:"실력은 통하지만 신입 문이 좁아짐",score:{job:3,safe:2,pay:4,future:4},why:["채용하는 기업 82%가 경력만 원함(대한상의 분석·2025)","AI가 코드 일부를 짜며 신입 개발 일이 줄어듦","실력이 있으면 업종 상관없이 일할 수 있음"],risk:"인기 학과라 졸업생이 많고 신입 경쟁이 셈",tip:"수업 밖에서 직접 만든 프로그램을 남기기",paths:["IT 회사 개발자","금융·대기업 전산직","AI·데이터 대학원","창업"],src:[0,13],alias:["컴공","컴퓨터","컴퓨터공학과","소프트웨어","SW","컴퓨터과학","개발자","코딩","정보통신","정보통신공학","전산","전산학","IT","컴퓨터공학부","컴퓨터정보","소프트웨어공학","소프트웨어학부","정보시스템","멀티미디어공학"],learn:["자료구조·알고리즘","운영체제","컴퓨터구조","데이터베이스·네트워크"],hs:["정보","대수","확률과 통계","미적분Ⅰ"],hard:"수학 증명을 오래 붙잡기 싫은 사람",math:"high",grad:false,license:false},
+  {id:"ai",name:"AI·소프트웨어",group:"공학",tier:"B",trend:"up",one:"뜨는 분야, 학부만으론 부족",score:{job:3,safe:2,pay:4,future:5},why:["AI를 쓰는 회사는 늘지만 개발은 석·박사 위주","새로 생긴 학과가 많아 졸업생 자료가 아직 적음","수학 기초가 약하면 따라가기 어려움"],risk:"학부 졸업만으로 AI 연구직은 어려움",tip:"수학·통계를 탄탄히, 대학원까지 생각하기",paths:["AI·데이터 회사","대학원 연구","일반 회사 데이터 분석","IT 개발자"],src:[0],alias:["인공지능","AI","AI학과","인공지능학과","AI융합","소프트웨어융합","지능정보","머신러닝","디지털콘텐츠","지능형시스템"],learn:["선형대수·확률통계","머신러닝·딥러닝","프로그래밍·자료구조","데이터 처리"],hs:["정보","인공지능 기초","대수","확률과 통계"],hard:"수학 기초를 다시 다지기 싫은 사람",math:"high",grad:true,license:false},
+  {id:"health",name:"물리치료·임상병리",group:"의약",tier:"B",trend:"flat",one:"면허로 취업, 월급은 보통",score:{job:4,safe:5,pay:2,future:3},why:["물리치료사·임상병리사 등 국가 면허가 있어야 함","나이 든 인구가 늘며 병원·요양 수요도 늘어남","월급이 오르는 폭은 작은 편"],risk:"전문대 졸업생과 같은 면허로 경쟁함",tip:"면허에 도수치료·검사장비 같은 전문 경력 더하기",paths:["병원 물리치료실","병원·센터 검사실","요양·재활 시설","보건직 공무원"],src:[0],alias:["물리치료","물리치료학","물리치료사","임상병리","임상병리학","임상병리사","보건","안경광학","안경","의료경영","병원경영","보건행정","보건관리","의료정보","보건의료행정"],learn:["해부학·생리학","병리학","전문 실습(치료·검사)","보건·의료법규"],hs:["생명과학","세포와 물질대사","화학"],hard:"사람 몸을 직접 다루는 실습이 부담스러운 사람",math:"low",grad:false,license:true,parts:[{name:"물리치료",note:"운동·전기·도수 치료로 재활을 돕는 일. 병원·재활센터·스포츠 쪽으로 감"},{name:"임상병리",note:"피·조직을 검사해 병을 찾는 일. 환자보다 검사실에서 일하는 시간이 긺"}]},
+  {id:"industrial",name:"산업공학",group:"공학",tier:"B",trend:"flat",one:"공장과 데이터를 잇는 공학",score:{job:3,safe:2,pay:4,future:3},why:["공장·물류가 일하는 방식을 효율적으로 바꾸는 학문","데이터 분석·기획·컨설팅으로 많이 감","기술 하나를 깊게보다 넓게 배우는 편"],risk:"넓게 배워서 \"무엇을 잘하나\"가 흐릴 수 있음",tip:"코딩·통계로 데이터 분석 실력을 함께 키우기",paths:["제조·물류 기획","데이터 분석가","컨설팅 회사","공기업"],src:[0],alias:["산업공학과","산업경영공학","산업시스템","경영공학","스마트팩토리","산업경영","시스템경영","산업안전","안전공학","안전보건"],learn:["확률·통계","생산·운영관리","최적화(OR)","품질·공정 관리"],hs:["확률과 통계","대수","미적분Ⅰ","정보"],hard:"숫자와 모델로 문제 푸는 일이 지루한 사람",math:"mid",grad:false,license:false},
+  {id:"chemical",name:"화학공학",group:"공학",tier:"B",trend:"down",one:"석유화학 불황, 다른 길은 있음",score:{job:3,safe:3,pay:4,future:2},why:["석유화학 업계가 불황이라 채용이 줄어듦","반도체·배터리·바이오 공정으로도 갈 수 있음","화공기사 자격으로 공기업·플랜트 지원 가능"],risk:"석유화학 경기가 언제 나아질지 모름",tip:"반도체·바이오 등 다른 공정 분야도 같이 보기",paths:["석유화학 회사","반도체·배터리 공정","바이오·제약 생산","환경·에너지 공기업"],src:[0],alias:["화공","화학공학과","화학생명공학","석유화학","배터리공정","응용화학","공업화학","화공생명","화공생명공학","정밀화학","고분자공학"],learn:["화학공학 열역학","물질·에너지 수지","반응공학","전달현상"],hs:["화학","화학 반응의 세계","미적분Ⅰ","물질과 에너지"],hard:"화학 계산을 길게 하는 일이 싫은 사람",math:"high",grad:true,license:false},
+  {id:"materials",name:"신소재·재료",group:"공학",tier:"B",trend:"down",one:"배터리 채용이 크게 줄어듦",score:{job:3,safe:2,pay:4,future:3},why:["배터리 3사 신규 채용, 2022년보다 64.2% 줄어(CEO스코어·2025)","반도체 소재·부품 쪽으로도 갈 수 있음","연구직은 석·박사를 많이 뽑음"],risk:"배터리 경기에 따라 채용이 크게 흔들림",tip:"반도체 소재 등 여러 산업에 맞는 실력 키우기",paths:["배터리·소재 회사","반도체 소재·부품","철강·금속 회사","대학원 연구"],contract:true,src:[0,8],alias:["신소재공학","재료공학","금속","소재","배터리","재료","섬유공학","고분자","세라믹","나노소재","나노","나노과학","반도체소재","첨단소재","신소재"],learn:["재료의 구조·물성","열역학·상변태","전자재료","분석 실험"],hs:["화학","물리학","물질과 에너지","미적분Ⅰ"],hard:"작은 알갱이 단위 개념이 막연한 사람",math:"mid",grad:true,license:false},
+  {id:"civil",name:"토목·건설",group:"공학",tier:"B",trend:"down",one:"건설 불황, 공기업이 버팀목",score:{job:3,safe:4,pay:3,future:2},why:["건설 불황으로 대형 건설사 직원이 1년 새 줄어듦(더팩트·2025)","토목기사 자격으로 공기업·공무원 길이 넓음","도로·철도·수도 같은 나라 공사는 계속 있음"],risk:"건설 경기에 크게 흔들리고 현장 근무가 많음",tip:"토목기사 따고 공기업·공무원 시험 같이 준비",paths:["도로·철도 공기업","토목직 공무원","건설사","설계·감리 회사"],src:[0,9],alias:["토목공학","건설환경","건설","사회기반시스템","토목환경","건설공학","건설시스템","토목건설","토목"],learn:["구조역학","토질·지반","수리·수문학","측량·시공"],hs:["미적분Ⅰ","물리학","역학과 에너지","기하"],hard:"야외 현장 일이 힘든 사람",math:"mid",grad:false,license:false},
+  {id:"math",name:"수학·통계",group:"자연",tier:"B",trend:"up",one:"데이터 시대의 기초 체력",score:{job:3,safe:2,pay:4,future:4},why:["데이터 분석과 AI의 바탕이 되는 학문","금융·보험사의 분석·계리 일로도 감","공부한 만큼 여러 분야로 넓힐 수 있음"],risk:"전공만으론 할 일이 안 보여 진로 고민이 길어짐",tip:"파이썬 같은 코딩과 통계 프로그램 함께 익히기",paths:["데이터 분석가","보험계리사","금융회사","수학 교사·대학원"],src:[0],alias:["수학","수학과","통계","통계학","응용수학","수리","계리","수리통계","정보통계","응용통계","금융수학","계리학","수리과학"],learn:["해석학","선형대수","통계·확률","수치해석"],hs:["미적분Ⅰ","미적분Ⅱ","기하","확률과 통계"],hard:"정답 없는 추상 문제를 오래 못 붙잡는 사람",math:"high",grad:true,license:false},
+  {id:"business",name:"경영·회계",group:"사회",tier:"B",trend:"flat",one:"어느 회사에나 필요한 전공",score:{job:3,safe:3,pay:4,future:3},why:["기획·재무·마케팅처럼 어느 회사에나 있는 일","회계사·세무사 시험을 보면 전문직 길도 있음","졸업생이 많아 같은 과끼리 경쟁이 셈"],risk:"전공 특색이 약해 스펙 경쟁이 심함",tip:"회계·데이터 등 내 무기 한 가지를 정하기",paths:["기업 기획·재무·마케팅","회계사·세무사","은행·증권사","창업"],src:[0],alias:["경영","경영학","회계","회계학","경영학과","마케팅","상경","경영정보","경영정보학","경영학부","글로벌경영","창업","유통경영","벤처경영"],learn:["경영학원론","회계원리","마케팅·재무관리","조직·인사"],hs:["경제","확률과 통계","사회와 문화","대수"],hard:"팀 과제와 발표가 부담스러운 사람",math:"mid",grad:false,license:false},
+  {id:"economics",name:"경제",group:"사회",tier:"B",trend:"flat",one:"숫자 다루는 사회 계열",score:{job:3,safe:2,pay:4,future:3},why:["금융·공기업·연구소처럼 숫자 다루는 일로 감","통계·수학을 많이 써서 데이터 일과도 이어짐","깊게 하려면 대학원(박사)이 필요"],risk:"배운 이론이 회사 실무와 거리가 있음",tip:"통계·코딩을 함께 배워 분석 실력 보여 주기",paths:["은행·증권·보험","공기업·경제 공무원","경제 연구소","데이터 분석"],src:[0],alias:["경제학","경제학과","경제","금융경제","경제학부","경제금융","경제통상","응용경제","자원경제"],learn:["미시경제학","거시경제학","계량경제학","경제 수학·통계"],hs:["경제","확률과 통계","미적분Ⅰ","경제 수학"],hard:"그래프와 수식 모델이 답답한 사람",math:"high",grad:true,license:false},
+  {id:"security",name:"정보보안",group:"공학",tier:"B",trend:"flat",one:"꼭 필요하지만 신입 문은 좁음",score:{job:2,safe:3,pay:4,future:4},why:["보안 신입 공고 552건→252건, 3년 새 절반 아래(파이낸셜뉴스·2026)","보안 공고의 96%가 경력직(파이낸셜뉴스·2026)","해킹 사고가 잦아 경력자 수요는 꾸준함"],risk:"경력직 위주라 첫 직장 잡기가 어려움",tip:"정보보안기사와 해킹 대회 경험으로 실력 보여 주기",paths:["보안 전문 회사","기업·금융 보안팀","공공기관 보안","보안 연구원"],src:[0,20],alias:["정보보호","사이버보안","해킹","보안공학","융합보안","화이트해커"],learn:["암호학","네트워크·시스템 보안","운영체제","해킹·침해 분석"],hs:["정보","대수","확률과 통계"],hard:"컴퓨터 내부를 파고드는 게 지루한 사람",math:"mid",grad:false,license:false},
+  {id:"datasci",name:"데이터사이언스",group:"공학",tier:"B",trend:"flat",one:"어디서나 쓰지만 경력을 원함",score:{job:3,safe:2,pay:4,future:4},why:["채용하는 기업 82%가 경력만 원함(대한상의 분석·2025)","금융·유통·제조 어디서나 데이터 분석을 씀","새로 생긴 학과가 많아 졸업생 자료가 적음"],risk:"AI가 단순 분석 일을 대신하기 시작",tip:"통계·코딩에 한 업종 지식을 더해 두기",paths:["데이터 분석가","데이터 엔지니어","AI·데이터 대학원","기업 기획·마케팅 분석"],src:[0,13],alias:["데이터과학","빅데이터","데이터","통계데이터","데이터분석"],learn:["확률·통계","프로그래밍(파이썬 등)","데이터 분석·시각화","머신러닝 기초"],hs:["확률과 통계","정보","대수","미적분Ⅰ"],hard:"통계 개념을 오래 붙잡기 싫은 사람",math:"high",grad:true,license:false},
+  {id:"biomed",name:"의공학·바이오공학",group:"공학",tier:"B",trend:"up",one:"바이오 수출 늘며 길이 넓어짐",score:{job:3,safe:2,pay:4,future:4},why:["2025 바이오헬스 수출 279억 달러, 역대 최대(헤럴드경제·2026)","의료기기·제약 생산·품질관리로 학사도 감","연구직은 석·박사를 많이 뽑음"],risk:"학사만으로 연구 개발 일은 어려움",tip:"의료기기 허가·품질 같은 실무 수업 들어 두기",paths:["의료기기 회사","바이오·제약 생산","병원 의공팀","대학원 연구"],src:[0,22],alias:["의공학","바이오공학","생명공학","의료공학","바이오메디컬","바이오의공학","의료기기","의용공학","생체공학","의료IT","바이오","바이오헬스","제약공학","바이오제약"],learn:["생리학·해부학","생체신호·의료영상","생체재료","의료기기 기초"],hs:["생명과학","물리학","미적분Ⅰ","세포와 물질대사"],hard:"생물과 공학을 같이 공부하기 부담스러운 사람",math:"mid",grad:true,license:false},
+  {id:"environment",name:"환경공학",group:"공학",tier:"B",trend:"flat",one:"공기업·공무원 길이 넓은 편",score:{job:3,safe:3,pay:3,future:3},why:["물·대기·폐기물 관리는 나라가 계속 해야 하는 일","환경기사 자격으로 공기업·환경직 공무원 지원 가능","탄소 배출 관리 같은 새 일도 생기는 중"],risk:"민간 회사 월급은 다른 공학보다 낮은 편",tip:"수질·대기환경기사 자격증을 졸업 전에 따기",paths:["환경 공기업","환경직 공무원","환경 컨설팅 회사","기업 환경안전팀"],src:[0],alias:["환경공학","환경에너지","환경학","기후","탄소중립","환경보건","환경","환경과학","환경생명공학","신재생에너지","에너지환경","대기환경","수질"],learn:["환경화학","수질·대기 관리","폐기물 처리","환경 영향 평가"],hs:["화학","생명과학","지구시스템과학","기후변화와 환경생태"],hard:"현장 측정과 법규 공부가 싫은 사람",math:"mid",grad:false,license:false},
+  {id:"healthlic",name:"치위생·방사선·작업치료",group:"의약",tier:"B",trend:"flat",one:"면허로 취업, 월급은 보통",score:{job:4,safe:5,pay:2,future:3},why:["치과위생사·방사선사·작업치료사 모두 국가 면허","나이 든 인구가 늘며 병원·재활 수요도 늘어남","월급이 오르는 폭은 작은 편"],risk:"전문대 졸업생과 같은 면허로 경쟁함",tip:"면허에 장비·재활 같은 전문 경력 더하기",paths:["치과 병·의원","병원 영상의학과","재활병원·치매센터","보건직 공무원"],src:[0],alias:["치위생","치위생학","치과위생사","방사선","방사선학","방사선사","작업치료","작업치료사","재활","언어재활","언어치료","치기공","치기공학","청능재활"],learn:["해부학·생리학","전문 실습(치료·촬영)","보건의료법규","병원 임상 실습"],hs:["생명과학","물리학","세포와 물질대사"],hard:"환자와 가까이서 오래 일하기 부담스러운 사람",math:"low",grad:false,license:true,parts:[{name:"치위생",note:"치과에서 스케일링·구강 관리·진료 보조. 치과의원 근무가 대부분"},{name:"방사선",note:"엑스선·CT·MRI 같은 영상을 찍는 일. 병원 영상의학과 중심"},{name:"작업치료",note:"일상 동작을 되찾는 훈련을 돕는 일. 재활병원·복지시설·학교 등으로 감"}]},
+  {id:"emt",name:"응급구조",group:"의약",tier:"B",trend:"up",one:"소방 구급대원으로 이어지는 길",score:{job:3,safe:4,pay:2,future:4},why:["1급 응급구조사 면허로 소방 구급 경력채용 지원 가능","2026 소방공무원 2891명 선발, 1년 새 964명 늘어(뉴시스·2026)","병원 밖 현장에서 일하는 시간이 많아 체력이 필요"],risk:"체력 부담이 크고 밤샘 근무가 많음",tip:"1급 응급구조사 따고 소방 체력시험 미리 준비",paths:["소방 구급대원","병원 응급실","민간 구급차·항공 이송","산업 현장 안전"],src:[0,28],alias:["응급구조학","응급구조사","응급의료","구급","파라메딕"],learn:["응급처치학","해부생리학","심폐소생술·외상 처치","응급 약물"],hs:["생명과학","세포와 물질대사","사회와 문화"],hard:"긴급 상황에서 침착함을 유지하기 어려운 사람",math:"low",grad:false,license:true},
+  {id:"police",name:"경찰행정·소방",group:"사회",tier:"B",trend:"up",one:"경찰·소방 채용이 늘어난 편",score:{job:3,safe:4,pay:3,future:3},why:["2026 경찰 6608명 채용, 1년 새 990명 늘어(한국경제·2026)","2026 소방공무원 2891명 선발, 1년 새 964명 늘어(뉴시스·2026)","경찰행정학과 전용 경력채용 길이 있음"],risk:"시험은 전공과 상관없이 누구나 봐서 경쟁이 셈",tip:"체력시험을 일찍 준비하고 학과 전용 채용 조건 확인",paths:["경찰공무원","소방공무원","교정·보호 공무원","기업 보안·안전"],src:[0,27,28],alias:["경찰행정","경찰학","경찰","소방","소방행정","소방안전","경호","교정","해양경찰","해경","소방방재","재난안전","방재","경찰행정학","소방학","소방공무원","사이버수사"],learn:["형법·형사소송법","경찰학","범죄학","소방·재난 관리"],hs:["법과 사회","정치","사회와 문화","체육1"],hard:"규율 있는 조직 생활이 맞지 않는 사람",math:"low",grad:false,license:false},
+  {id:"finance",name:"금융·세무",group:"사회",tier:"B",trend:"flat",one:"자격증 따면 길이 넓어짐",score:{job:3,safe:3,pay:4,future:3},why:["4대 은행 하반기 공채 645명, 2년 새 205명 줄어(CEO스코어·2025)","세무사 시험 최소 합격 700명, 8년째 같음(택스워치·2026)","회계·세무 자격이 있으면 갈 곳이 넓음"],risk:"은행 창구 일은 디지털로 계속 줄어듦",tip:"세무·회계 자격증이나 데이터 분석 실력 더하기",paths:["은행·증권·보험","세무사·회계사","기업 재무·세무팀","세무직 공무원"],src:[0,30,31],alias:["금융","금융학","세무","세무학","보험","재무","핀테크","회계세무","금융보험","금융투자","자산운용","세무회계"],learn:["재무관리","회계원리·세법","금융시장·투자론","보험·리스크 관리"],hs:["경제","금융과 경제생활","확률과 통계","대수"],hard:"숫자와 규정을 꼼꼼히 챙기기 싫은 사람",math:"mid",grad:false,license:false},
+  {id:"trade",name:"국제통상·무역",group:"사회",tier:"B",trend:"up",one:"수출 늘며 무역 일도 늘어",score:{job:3,safe:2,pay:4,future:3},why:["2025 수출 7097억 달러, 역대 최대(뉴시스·2026)","해외영업·물류·무역 회사로 많이 감","외국어 실력이 함께 있으면 힘이 큼"],risk:"세계 경기·관세 같은 바깥 사건에 흔들림",tip:"외국어 하나와 무역 실무 자격증 함께 준비",paths:["해외영업","무역·물류 회사","무역 공기업","관세사·관세직 공무원"],src:[0,29],alias:["국제통상","무역","무역학","국제무역","통상","국제경영","물류","글로벌비즈니스","관세","항만물류","유통","국제물류"],learn:["국제무역·통상 이론","무역 실무","국제경제학","외국어(영어·중국어 등)"],hs:["경제","영어Ⅰ","국제 관계의 이해","사회와 문화"],hard:"외국어와 서류 업무가 부담스러운 사람",math:"mid",grad:false,license:false},
+  {id:"military",name:"군사학",group:"사회",tier:"B",trend:"flat",one:"졸업하면 장교가 되는 길",score:{job:4,safe:4,pay:2,future:2},why:["군과 협약한 학과는 졸업 뒤 장교가 됨","새로 장교가 된 육군 인원 4860명→3710명(2021→2025년, 세계일보·2025)","10~20년 차 간부 희망전역 960명→1821명(2021→2024년, 세계일보·2025)"],risk:"의무 복무 기간이 있고 지방 근무가 많음",tip:"의무 복무 기간과 장학 조건을 꼭 확인",paths:["장교(육·해·공군)","군무원","방산 회사","경찰·공무원"],contract:true,src:[0,34],alias:["국방","장교","사관학교","육군사관학교","군사"],learn:["군사학 개론","전략·전술","국방·안보","리더십·체력 훈련"],hs:["체육1","한국사","정치"],hard:"엄격한 단체 생활이 부담스러운 사람",math:"low",grad:false,license:false},
+  {id:"specialedu",name:"특수교육",group:"교육",tier:"B",trend:"up",one:"교사 중 드물게 선발이 늘어",score:{job:3,safe:4,pay:3,future:4},why:["2027 특수교사 1056명 선발 예고, 1년 새 181명 늘어(머니투데이·2026)","다른 교과 교사는 선발이 줄어드는 흐름","특수교육이 필요한 학생은 줄지 않는 편"],risk:"학생마다 필요한 도움이 달라 일이 고됨",tip:"봉사·실습으로 특수학교 현장을 먼저 겪어 보기",paths:["특수교사(유·초·중등)","특수학교·복지관","장애인 고용·재활 기관","치료·교육 센터"],src:[0,23],alias:["특수교육학","특수교사","특수교육과","유아특수교육","중등특수교육","특수","장애"],learn:["특수교육학 개론","장애 유형별 이해","교수·학습 방법","특수교육 실습"],hs:["사회와 문화","독서와 작문","윤리와 사상"],hard:"학생 한 명에게 오래 맞춰 가르치기 힘든 사람",math:"low",grad:false,license:true},
+  {id:"pilot",name:"항공운항(조종)",group:"공학",tier:"B",trend:"flat",one:"월급은 높고 비용·시간도 큼",score:{job:3,safe:3,pay:5,future:3},why:["사업용 조종사 면허와 비행 시간을 채워야 항공사에 감","비행 훈련 비용이 많이 드는 편","시력·신체검사 기준을 통과해야 함"],risk:"시력·건강 기준이 있고 항공 경기에 흔들림",tip:"신체검사 기준과 훈련 비용부터 확인",paths:["항공사 조종사","공군 조종사","항공 교관","항공 운항 관리"],src:[0],alias:["항공운항","조종","조종사","파일럿","비행","항공운항학"],learn:["비행 이론·항공역학","항공기상","항법·계기비행","비행 실습"],hs:["물리학","역학과 에너지","영어Ⅰ","미적분Ⅰ"],hard:"비행 훈련비와 시간 투자가 부담스러운 사람",math:"mid",grad:false,license:true},
+  {id:"cosmetic",name:"화장품·향장과학",group:"자연",tier:"B",trend:"up",one:"K뷰티 수출 늘며 연구·품질 수요",score:{job:3,safe:2,pay:3,future:4},why:["2025 화장품 수출 114억 달러, 11.8% 늘어 역대 최대(뉴시스·2026)","화장품 책임판매업체 2만8412곳으로 1년 새 553곳 늘고, 제조업체는 4158곳(코스모닝·2026)","연구직은 대학원 출신이 많은 편이고, 학사는 품질·생산·허가 업무로 많이 감"],risk:"수출 비중이 커서 해외 시장에 따라 흔들릴 수 있음",tip:"화학·피부 기초 수업과 맞춤형화장품조제관리사 같은 자격을 함께 준비",paths:["화장품 회사 연구·품질관리","화장품 제조(OEM·ODM) 회사","브랜드 상품기획·허가 업무","대학원 연구"],src:[0,40,43],alias:["향장","화장품","화장품과학","코스메틱","화장품공학","향장학","화장품학","코스메슈티컬","뷰티사이언스","바이오코스메틱","화장품생명","향료","향장과학","뷰티화장품"],learn:["화장품 화학","피부과학","제형·원료 실험","화장품 법규·품질관리"],hs:["화학","화학 반응의 세계","생명과학","세포와 물질대사"],hard:"실험실 반복 작업이 지루한 사람",math:"low",grad:true,license:false},
 
   // ===== C =====
-  {id:"architecture",name:"건축·실내건축",group:"공학",tier:"C",trend:"down",one:"건설 불황에 설계 일도 줄어",score:{job:2,safe:3,pay:3,future:2},why:["공학 계열 취업률 70.4%(교육부·2025)","건설 불황으로 대형 건설사 직원이 줄어듦(더팩트·2025)","건축사가 되려면 졸업 뒤 실무 경력이 필요","설계 사무소는 일이 많고 월급이 낮은 편"],risk:"건설 경기 회복이 늦으면 채용도 늦어짐",tip:"설계 포트폴리오와 건축 프로그램 실력 쌓기",paths:["설계 사무소","건설사(공무·현장)","건축직 공무원","인테리어·리모델링"],src:[0,9],alias:["건축학","건축공학","건축","인테리어","실내건축","건축설계","건축디자인","실내디자인","도시건축","조경","조경학"]},
-  {id:"education",name:"교육(교대·사범대)",group:"교육",tier:"C",trend:"down",one:"학생 줄며 교사 자리도 줄어",score:{job:3,safe:4,pay:3,future:1},why:["교육 계열 취업률 71.1%(교육부·2025)","2027 초등교사 2821명 선발, 9.4% 줄어(파이낸셜뉴스·2026)","중등교사 선발도 2026년보다 크게 줄 예정(머니투데이·2026)","학생 수가 줄어 교사 자리는 더 줄 수 있음"],risk:"임용시험에 떨어지면 기간제 교사로 버티는 경우 많음",tip:"임용 말고 교육회사·공무원 길도 함께 준비",paths:["초·중등 교사","교육회사(콘텐츠·에듀테크)","학원 강사","교육행정 공무원"],src:[0,10,11],alias:["교대","사범대","교육학","교원","초등교육","초등교사","국어교육","영어교육","수학교육","과학교육","교직","교육공학","기술교육","역사교육","윤리교육","컴퓨터교육","교육행정"]},
-  {id:"publicadmin",name:"행정·정책학",group:"사회",tier:"C",trend:"flat",one:"공무원 준비에 유리한 편",score:{job:3,safe:3,pay:3,future:2},why:["사회 계열 취업률 69.0%(교육부·2025)","배우는 내용이 공무원 시험 과목과 겹침","공무원 시험은 전공과 상관없이 누구나 봄","회사 취업에선 경영·경제와 비슷하게 경쟁"],risk:"시험 준비가 길어지면 다른 길이 좁아짐",tip:"시험 기간을 정해 두고 다른 길도 준비",paths:["공무원","공기업","기업 인사·총무","대학원(정책)"],src:[0],alias:["행정학","행정학과","공공행정","공무원","정책학","정책","공공정책","도시행정","공공인재","행정복지","행정"]},
-  {id:"law",name:"법학",group:"사회",tier:"C",trend:"flat",one:"변호사는 로스쿨을 거쳐야",score:{job:2,safe:3,pay:3,future:3},why:["사회 계열 취업률 69.0%(교육부·2025)","변호사가 되려면 로스쿨(대학원)에 가야 함","로스쿨은 학부 전공과 상관없이 지원 가능","법원·검찰 공무원, 회사 법무팀으로도 감"],risk:"로스쿨 입시가 따로 있어 법학과가 꼭 유리하진 않음",tip:"학점과 법학적성시험(LEET)을 일찍 준비",paths:["로스쿨 → 변호사","법원·검찰 공무원","기업 법무팀","법무사·노무사"],src:[0],alias:["법대","법학과","법","변호사","로스쿨","법학부","법무","법률","지식재산"]},
-  {id:"biology",name:"생명과학",group:"자연",tier:"C",trend:"flat",one:"연구직은 대학원이 기본",score:{job:2,safe:2,pay:3,future:3},why:["자연 계열 취업률 65.4%(교육부·2025)","연구직은 대부분 석·박사를 뽑음","바이오·제약 회사 생산·품질관리는 학사도 뽑음","바이오 산업이 크면 일자리도 함께 늘어남"],risk:"학사만으론 연구직이 어려움",tip:"대학원까지 갈지 일찍 정하기",paths:["바이오·제약 회사(생산·품질)","대학원 연구","식품·화장품 회사","연구직 공무원"],src:[0],alias:["생명과학과","생물","생물학","생명","분자생물","미생물","생화학","생명시스템","유전공학","생물학과"]},
-  {id:"physchem",name:"물리·화학",group:"자연",tier:"C",trend:"flat",one:"기초는 탄탄, 대학원이 전제",score:{job:2,safe:2,pay:3,future:3},why:["자연 계열 취업률 65.4%(교육부·2025)","반도체·배터리 회사가 물리·화학 지식을 많이 씀","연구직은 대부분 대학원 졸업자를 뽑음","기초 원리는 공대보다 깊게 배움"],risk:"학사만으로는 맡을 일이 애매해 보일 수 있음",tip:"반도체·소재 관련 수업과 실습을 더 들어 두기",paths:["반도체·소재 회사","대학원 연구","연구소","과학 교사"],src:[0],alias:["물리학","화학과","물리학과","기초과학"]},
-  {id:"psychology",name:"심리",group:"사회",tier:"C",trend:"flat",one:"전문가는 대학원·수련 필수",score:{job:2,safe:2,pay:2,future:3},why:["사회 계열 취업률 69.0%(교육부·2025)","상담사·임상심리사는 대학원과 수련을 거쳐야 함","기업 인사·마케팅·사용자 조사로도 감","마음 건강 관심이 커지며 상담 수요가 늘어남"],risk:"학부만으로 심리 전문직이 되긴 어려움",tip:"대학원 갈지 회사 갈지 2학년 전에 정하기",paths:["상담사(대학원·수련)","임상심리전문가","기업 인사·마케팅","사용자 조사(UX 리서치)"],src:[0],alias:["심리학","심리학과","상담","상담심리","임상심리","심리치료","미술치료","아동심리","청소년상담","범죄심리","산업심리"]},
-  {id:"media",name:"미디어·신문방송·광고홍보",group:"사회",tier:"C",trend:"down",one:"자리는 적고 AI는 들어오는 중",score:{job:2,safe:2,pay:3,future:2},why:["사회 계열 취업률 69.0%(교육부·2025)","방송·신문사 공채는 자리가 적고 경쟁이 매우 셈","AI가 영상 편집·자막 일 일부를 대신하기 시작","유튜브·광고 같은 새 일자리도 생김"],risk:"언론사 시험은 준비 기간이 길고 자리가 적음",tip:"직접 만든 영상·글 포트폴리오 쌓기",paths:["방송·신문사","광고·홍보 회사","영상 콘텐츠 제작","기업 홍보팀"],src:[0],alias:["신문방송","신방과","언론","언론정보","미디어커뮤니케이션","광고홍보","방송","미디어","커뮤니케이션","광고","홍보","저널리즘","영상미디어","콘텐츠","미디어콘텐츠","문화콘텐츠","미디어·신문방송"]},
-  {id:"design",name:"시각·산업·패션디자인",group:"예체능",tier:"C",trend:"down",one:"단순 작업은 AI와 경쟁",score:{job:3,safe:2,pay:2,future:2},why:["예체능 계열 취업률 66.7%(교육부·2025)","AI가 이미지를 만들며 단순 작업 의뢰가 줄어듦","UX·제품 디자인처럼 기획까지 하는 일은 수요 있음","학교 이름보다 포트폴리오가 더 중요함"],risk:"프리랜서가 많아 수입이 불안정함",tip:"AI 도구 쓰는 법과 기획력을 함께 키우기",paths:["UX·UI 디자이너","제품·패키지 디자인","브랜드·광고 디자인","프리랜서"],src:[0],alias:["시각디자인","산업디자인","UX","UI","패션디자인","디자인학과","영상디자인","패션","제품디자인","공간디자인","환경디자인","멀티미디어","애니메이션","만화","웹툰","사진","사진영상","캐릭터","의류","의류학","의상","의상학","패션마케팅","섬유","디자인"]},
-  {id:"agri",name:"농학·원예·축산",group:"자연",tier:"C",trend:"flat",one:"스마트팜·식품으로 길이 넓어짐",score:{job:2,safe:2,pay:2,future:4},why:["자연 계열 취업률 65.4%(교육부·2025)","스마트팜·식품 회사 쪽으로 일자리가 넓어지는 중","농업 공무원·공기업 길이 있음","연구직은 대학원 출신을 많이 뽑음"],risk:"일터가 지방에 많은 편",tip:"식품·데이터 같은 다른 분야 수업도 들어 두기",paths:["식품 회사","농업 공무원·공기업","스마트팜 회사","연구소"],src:[0],alias:["농학","농업","농생명과학","원예","스마트팜","축산","산림","식물자원","동물자원","반려동물","펫","산림자원","임학","바이오시스템","생명자원","수산","수산학","수산생명","식물의학","농생명"]},
-  {id:"tourism",name:"관광·호텔",group:"사회",tier:"C",trend:"flat",one:"취업은 되지만 월급이 낮은 편",score:{job:3,safe:2,pay:1,future:3},why:["사회 계열 취업률 69.0%(교육부·2025)","호텔·여행사는 월급이 낮은 편","코로나 때처럼 바깥 사건에 업계 전체가 흔들림","외국어 실력이 있으면 길이 넓어짐"],risk:"경기·사건에 업계 전체가 흔들림",tip:"외국어 하나는 확실하게 해 두기",paths:["호텔·리조트","여행사·항공사","관광 공기업","외식·서비스 회사"],src:[0],alias:["관광","호텔","호텔경영","관광경영","컨벤션","호텔관광","관광학","관광경영학","관광개발","레저","MICE","리조트","호텔관광경영","관광통역","관광영어"]},
-  {id:"sports",name:"체육·스포츠",group:"예체능",tier:"C",trend:"flat",one:"자격증 쌓으면 길이 보임",score:{job:3,safe:2,pay:2,future:3},why:["예체능 계열 취업률 66.7%(교육부·2025)","생활스포츠지도사 같은 자격증 길이 있음","건강 관심이 커져 운동 지도 수요가 있음","체육 교사는 임용시험 경쟁이 셈"],risk:"선수·지도자는 사람마다 수입 차이가 매우 큼",tip:"자격증 2개 이상과 재활·트레이닝 지식 쌓기",paths:["트레이너·운동 지도자","체육 교사","스포츠 마케팅","경찰·소방 공무원"],src:[0],alias:["체육","체육학","체육교육","스포츠","생활체육","운동처방","스포츠과학","태권도","스포츠경영","스포츠레저","스포츠산업","스포츠마케팅","레저스포츠","무도","골프","건강운동","스포츠의학","스포츠지도","사회체육"]},
-  {id:"urban",name:"도시공학·지리",group:"공학",tier:"C",trend:"down",one:"건설 불황, 공공 일이 버팀목",score:{job:2,safe:3,pay:3,future:2},why:["공학 계열 취업률 70.4%(교육부·2025)","건설 불황으로 대형 건설사 직원이 줄어듦(더팩트·2025)","도시계획·지도(GIS) 일은 공공기관이 많이 함","도시계획기사·측량 자격으로 공무원 지원 가능"],risk:"건설·부동산 경기에 따라 일감이 크게 바뀜",tip:"GIS 같은 지도 데이터 프로그램 실력 쌓기",paths:["도시계획직 공무원","토지·주택 공기업","도시계획 설계 회사","지도·공간정보 회사"],src:[0,9],alias:["도시공학","도시계획","지리","지리학","지리교육","GIS","공간정보","지적","지적학","측량","지리정보","도시재생","교통","교통공학","도시교통"]},
-  {id:"game",name:"게임",group:"공학",tier:"C",trend:"down",one:"포트폴리오가 학위보다 중요",score:{job:2,safe:1,pay:3,future:3},why:["공학 계열 취업률 70.4%(교육부·2025)","국내 게임 이용률 50.2%, 조사 시작 뒤 가장 낮음(아시아경제·2026)","게임 회사들이 인력을 줄이며 몸집을 줄이는 중","만든 게임 결과물이 취업에서 가장 중요"],risk:"회사 흥행에 따라 일자리가 흔들림",tip:"혼자든 팀이든 완성한 게임을 꼭 남기기",paths:["게임 개발자(프로그래밍)","게임 기획자","게임 그래픽","IT 개발자로 전환"],src:[0,21],alias:["게임공학","게임학","게임개발","게임콘텐츠","게임디자인","e스포츠","이스포츠","게임그래픽"]},
-  {id:"nutrition",name:"식품영양",group:"자연",tier:"C",trend:"flat",one:"영양사 면허가 기본 무기",score:{job:3,safe:3,pay:2,future:3},why:["자연 계열 취업률 65.4%(교육부·2025)","영양사 면허로 학교·병원·급식 회사에 감","2027 영양교사 261명 선발 예고(머니투데이·2026)","식품 회사 연구·품질관리 길도 있음"],risk:"급식 영양사는 월급이 낮은 편",tip:"영양교사를 원하면 교직 이수 가능 여부부터 확인",paths:["영양교사","병원·급식 영양사","식품 회사(연구·품질)","보건소·공무원"],src:[0,23],alias:["식품영양학","영양","영양사","식품공학","식품과학","식품","식품생명","급식","영양교사","식품가공"]},
-  {id:"earthsci",name:"지구과학·해양",group:"자연",tier:"C",trend:"flat",one:"연구직은 대학원, 공무원 길도",score:{job:2,safe:2,pay:3,future:3},why:["자연 계열 취업률 65.4%(교육부·2025)","기상·지질·해양 연구직은 석·박사를 많이 뽑음","해양수산부가 부산으로 옮겨 감(헤럴드경제·2025)","기상직·해양수산직 공무원 길이 있음"],risk:"학사만으로 갈 수 있는 민간 회사가 적음",tip:"기상·해양 공무원과 대학원 중 일찍 정하기",paths:["기상·해양 공무원","연구소","지질·환경 조사 회사","과학 교사"],src:[0,35],alias:["지구과학","지구환경과학","천문","천문학","우주과학","대기과학","기상","해양학","해양과학","지질","대기","천문우주","해양생명","지구시스템","지질학"]},
-  {id:"welfare",name:"사회복지",group:"사회",tier:"C",trend:"flat",one:"일자리는 많고 처우는 아쉬움",score:{job:3,safe:3,pay:1,future:3},why:["사회 계열 취업률 69.0%(교육부·2025)","사회복지사 자격으로 복지관·시설·공무원에 감","2026 복지시설 종사자 기본급 3.5% 인상(헤럴드경제·2025)","종사자 10명 중 7명이 이직 생각(뉴시스·2025)"],risk:"일에 비해 월급이 낮고 감정 소모가 큼",tip:"사회복지직 공무원 시험도 같이 알아 두기",paths:["사회복지직 공무원","복지관·복지시설","병원·학교 사회복지사","공공기관"],src:[0,25,26],alias:["사회복지학","복지","사회복지사","노인복지","청소년복지","사회사업","상담복지","청소년학","청소년지도","평생교육","사회서비스"]},
-  {id:"libinfo",name:"문헌정보",group:"사회",tier:"C",trend:"flat",one:"사서 자격, 자리는 적은 편",score:{job:2,safe:3,pay:2,future:3},why:["사회 계열 취업률 69.0%(교육부·2025)","졸업하면 정사서 자격을 받음","2027 사서교사 102명 선발 예고(머니투데이·2026)","도서관 밖 자료·데이터 관리 일로도 이어짐"],risk:"공공 도서관 자리가 적어 경쟁이 셈",tip:"사서직 공무원과 데이터 관리 실력 함께 준비",paths:["사서직 공무원","사서교사","대학·기업 도서관","기록물·데이터 관리"],src:[0,23],alias:["문헌정보학","도서관","사서","기록관리","문헌정보학과","사서교사","정보관리"]},
-  {id:"polsoc",name:"정치외교·사회학",group:"사회",tier:"C",trend:"flat",one:"넓게 배우고 진로는 스스로",score:{job:2,safe:2,pay:3,future:2},why:["사회 계열 취업률 69.0%(교육부·2025)","전공과 바로 이어지는 직업은 적은 편","공무원·공기업·언론·연구소로 많이 감","조사·분석 힘은 기획·마케팅 일에서도 쓰임"],risk:"전공만으로는 내 강점을 보여 주기 어려움",tip:"통계·외국어 같은 무기 하나를 더 키우기",paths:["공무원·외교관","공기업","언론·연구소","기업 기획·조사"],src:[0],alias:["정치외교","정치외교학","정치학","외교","국제관계","사회학","사회과학","정외","인류학","문화인류학","지역학","국제학","국제지역학","북한학","통일","사회과학부"]},
-  {id:"cabin",name:"항공서비스",group:"사회",tier:"C",trend:"flat",one:"승무원 공채는 있지만 경쟁 셈",score:{job:3,safe:2,pay:2,future:2},why:["사회 계열 취업률 69.0%(교육부·2025)","대한항공 통합 항공사 앞두고 신입 승무원 공채(이코노미스트·2025)","항공 업계는 전염병·유가 같은 바깥 사건에 흔들림","외국어 성적과 면접 준비가 중요"],risk:"경기·사건에 따라 채용이 갑자기 멈출 수 있음",tip:"외국어 하나는 확실히, 호텔·서비스 길도 함께",paths:["객실승무원","공항 지상직","호텔·여행사","서비스 교육 강사"],src:[0,37],alias:["항공서비스","항공관광","승무원","항공경영","항공운항서비스","항공서비스학과","공항","공항서비스","객실승무원","항공객실"]},
-  {id:"earlyedu",name:"유아교육·아동학",group:"교육",tier:"C",trend:"down",one:"아이 줄며 유치원도 줄어",score:{job:3,safe:3,pay:2,future:1},why:["교육 계열 취업률 71.1%(교육부·2025)","유치원 8555곳→7435곳, 9년 새 줄어(베이비뉴스·2026)","2027 유치원 교사 592명 선발, 76명 줄어(머니투데이·2026)","최근 출생아는 늘어 감소 속도는 지켜볼 일"],risk:"사립 유치원·어린이집은 월급이 낮은 편",tip:"임용 말고 아동 콘텐츠·상담 길도 함께 보기",paths:["유치원 교사","어린이집 교사","아동 교육 콘텐츠 회사","아동 상담·복지 기관"],src:[0,23,24],alias:["유아교육","유아교육과","유치원교사","아동학","아동가족","보육","아동보육","아동복지","유아","어린이","아동학과","보육교사"]},
-  {id:"culinary",name:"조리·외식",group:"예체능",tier:"C",trend:"flat",one:"일자리는 많고 월급·체력이 관건",score:{job:3,safe:2,pay:2,future:3},why:["예체능 계열 취업률 66.7%(교육부·2025)","2025년 외식업 폐업 11만4159곳이 인허가 9만7296곳보다 많음(한국경제·2026)","외식업 매출이 4년 만에 줄고 고용도 둔화됨(뉴시스·2025)","단체급식·식품 회사로도 갈 수 있음"],risk:"조리 현장은 근무가 길고 체력 부담이 큼",tip:"조리기능사 같은 자격증과 호텔·단체급식 실습 경험 쌓기",paths:["호텔·리조트 조리","외식 브랜드·프랜차이즈 본사","단체급식·식품 회사","본인 가게 창업"],src:[0,38,39],alias:["호텔조리","조리","조리과학","외식조리","조리학과","조리학","제과제빵","제빵","제과","베이킹","바리스타","셰프","요리","조리제과제빵","한식조리","외식","외식경영","외식산업","푸드","푸드서비스","식음료","외식창업"]},
-  {id:"beauty",name:"뷰티·미용(헤어·피부)",group:"예체능",tier:"C",trend:"flat",one:"면허는 빨리 따도 폐업·경쟁이 큼",score:{job:3,safe:2,pay:2,future:2},why:["예체능 계열 취업률 66.7%(교육부·2025)","2024년 미용업 폐업 1만3284곳, 1년 새 5.25% 늘어(한국경제·2025)","집에서 직접 하는 셀프 네일이 늘어 네일 가게가 특히 힘듦(한국경제·2025)","학생이 가장 많이 준비하는 기능사가 미용사(일반)라 진입 경쟁이 센 편(SBS Biz·2026)"],risk:"미용실·피부관리실 창업 문턱은 낮은 편이지만 경쟁이 세고 초반 월급이 낮은 편",tip:"미용사 면허(일반·피부·네일)를 학교 다니며 따고, 매장 경험으로 한 분야 실력 쌓기",paths:["미용실 헤어디자이너","피부관리실·에스테틱","메이크업·네일 아티스트","본인 매장 창업"],src:[0,41,42],alias:["뷰티","미용","헤어","메이크업","피부미용","에스테틱","네일","뷰티케어","미용예술","미용학","뷰티미용","피부관리","미용사","뷰티산업","뷰티코디","네일아트"]},
+  {id:"architecture",name:"건축·실내건축",group:"공학",tier:"C",trend:"down",one:"건설 불황에 설계 일도 줄어",score:{job:2,safe:3,pay:3,future:2},why:["건설 불황으로 대형 건설사 직원이 줄어듦(더팩트·2025)","건축사는 5년제 졸업이나 실무 경력이 필요","설계 사무소는 일이 많고 월급이 낮은 편"],risk:"건설 경기 회복이 늦으면 채용도 늦어짐",tip:"설계 포트폴리오와 건축 프로그램 실력 쌓기",paths:["설계 사무소","건설사(공무·현장)","건축직 공무원","인테리어·리모델링"],src:[0,9],alias:["건축학","건축공학","건축","인테리어","실내건축","건축설계","건축디자인","실내디자인","도시건축","조경","조경학"],learn:["건축설계","건축구조","건축재료·시공","건축사·도시 이해"],hs:["미적분Ⅰ","기하","물리학","미술"],hard:"밤샘 설계 과제를 견디기 힘든 사람",math:"mid",grad:false,license:true},
+  {id:"education",name:"교육(교대·사범대)",group:"교육",tier:"C",trend:"down",one:"학생 줄며 교사 자리도 줄어",score:{job:3,safe:4,pay:3,future:1},why:["2027 초등교사 2821명 선발, 9.4% 줄어(파이낸셜뉴스·2026)","중등교사 선발도 2026년보다 크게 줄 예정(머니투데이·2026)","학생 수가 줄어 교사 자리는 더 줄 수 있음"],risk:"임용시험에 떨어지면 기간제 교사로 버티는 경우 많음",tip:"임용 말고 교육회사·공무원 길도 함께 준비",paths:["초·중등 교사","교육회사(콘텐츠·에듀테크)","학원 강사","교육행정 공무원"],src:[0,10,11],alias:["교대","사범대","교육학","교원","초등교육","초등교사","국어교육","영어교육","수학교육","과학교육","교직","교육공학","기술교육","역사교육","윤리교육","컴퓨터교육","교육행정"],learn:["교육학 개론","교육과정·교수법","교육심리","교과 교육 실습"],hs:["사회와 문화","윤리와 사상","독서와 작문"],hard:"여러 학생 앞에서 이끄는 일이 부담스러운 사람",math:"low",grad:false,license:true},
+  {id:"publicadmin",name:"행정·정책학",group:"사회",tier:"C",trend:"flat",one:"공무원 준비에 유리한 편",score:{job:3,safe:3,pay:3,future:2},why:["배우는 내용이 공무원 시험 과목과 겹침","공무원 시험은 전공과 상관없이 누구나 봄","회사 취업에선 경영·경제와 비슷하게 경쟁"],risk:"시험 준비가 길어지면 다른 길이 좁아짐",tip:"시험 기간을 정해 두고 다른 길도 준비",paths:["공무원","공기업","기업 인사·총무","대학원(정책)"],src:[0],alias:["행정학","행정학과","공공행정","공무원","정책학","정책","공공정책","도시행정","공공인재","행정복지","행정"],learn:["행정학 개론","정책학","행정법","재정·조직 이론"],hs:["정치","법과 사회","경제","확률과 통계"],hard:"규정과 절차 공부가 답답한 사람",math:"low",grad:false,license:false},
+  {id:"law",name:"법학",group:"사회",tier:"C",trend:"flat",one:"변호사는 로스쿨을 거쳐야",score:{job:2,safe:3,pay:3,future:3},why:["변호사가 되려면 로스쿨(대학원)에 가야 함","로스쿨은 학부 전공과 상관없이 지원 가능","법원·검찰 공무원, 회사 법무팀으로도 감"],risk:"로스쿨 입시가 따로 있어 법학과가 꼭 유리하진 않음",tip:"학점과 법학적성시험(LEET)을 일찍 준비",paths:["로스쿨 → 변호사","법원·검찰 공무원","기업 법무팀","법무사·노무사"],src:[0],alias:["법대","법학과","법","변호사","로스쿨","법학부","법무","법률","지식재산"],learn:["헌법","민법","형법","상법·소송법"],hs:["법과 사회","정치","독서와 작문","윤리와 사상"],hard:"조문과 판례를 끝없이 읽기 싫은 사람",math:"low",grad:true,license:false},
+  {id:"biology",name:"생명과학",group:"자연",tier:"C",trend:"flat",one:"연구직은 대학원이 기본",score:{job:2,safe:2,pay:3,future:3},why:["연구직은 대부분 석·박사를 뽑음","바이오·제약 회사 생산·품질관리는 학사도 뽑음","바이오 산업이 크면 일자리도 함께 늘어남"],risk:"학사만으론 연구직이 어려움",tip:"대학원까지 갈지 일찍 정하기",paths:["바이오·제약 회사(생산·품질)","대학원 연구","식품·화장품 회사","연구직 공무원"],src:[0],alias:["생명과학과","생물","생물학","생명","분자생물","미생물","생화학","생명시스템","유전공학","생물학과"],learn:["생화학","분자·세포생물학","유전학","미생물학·생리학"],hs:["생명과학","세포와 물질대사","생물의 유전","화학"],hard:"실험 결과를 오래 기다리는 일이 답답한 사람",math:"mid",grad:true,license:false},
+  {id:"physchem",name:"물리·화학",group:"자연",tier:"C",trend:"flat",one:"기초는 탄탄, 대학원이 전제",score:{job:2,safe:2,pay:3,future:3},why:["반도체·배터리 회사가 물리·화학 지식을 많이 씀","연구직은 대부분 대학원 졸업자를 뽑음","기초 원리는 공대보다 깊게 배움"],risk:"학사만으로는 맡을 일이 애매해 보일 수 있음",tip:"반도체·소재 관련 수업과 실습을 더 들어 두기",paths:["반도체·소재 회사","대학원 연구","연구소","과학 교사"],src:[0],alias:["물리학","화학과","물리학과","기초과학"],learn:["역학·전자기학","양자역학","유기·물리화학","물리·화학 실험"],hs:["미적분Ⅰ","미적분Ⅱ","물리학","화학"],hard:"원리를 수식으로 풀어내는 게 답답한 사람",math:"high",grad:true,license:false},
+  {id:"psychology",name:"심리",group:"사회",tier:"C",trend:"flat",one:"전문가는 대학원·수련 필수",score:{job:2,safe:2,pay:2,future:3},why:["상담사·임상심리사는 대학원과 수련을 거쳐야 함","기업 인사·마케팅·사용자 조사로도 감","마음 건강 관심이 커지며 상담 수요가 늘어남"],risk:"학부만으로 심리 전문직이 되긴 어려움",tip:"대학원 갈지 회사 갈지 2학년 전에 정하기",paths:["상담사(대학원·수련)","임상심리전문가","기업 인사·마케팅","사용자 조사(UX 리서치)"],src:[0],alias:["심리학","심리학과","상담","상담심리","임상심리","심리치료","미술치료","아동심리","청소년상담","범죄심리","산업심리"],learn:["일반·발달심리","사회심리","상담이론","심리통계·연구방법"],hs:["사회와 문화","확률과 통계","생명과학","윤리와 사상"],hard:"통계와 실험 설계가 부담스러운 사람",math:"mid",grad:true,license:false},
+  {id:"media",name:"미디어·신문방송·광고홍보",group:"사회",tier:"C",trend:"down",one:"자리는 적고 AI는 들어오는 중",score:{job:2,safe:2,pay:3,future:2},why:["방송·신문사 공채는 자리가 적고 경쟁이 매우 셈","AI가 영상 편집·자막 일 일부를 대신하기 시작","유튜브·광고 같은 새 일자리도 생김"],risk:"언론사 시험은 준비 기간이 길고 자리가 적음",tip:"직접 만든 영상·글 포트폴리오 쌓기",paths:["방송·신문사","광고·홍보 회사","영상 콘텐츠 제작","기업 홍보팀"],src:[0],alias:["신문방송","신방과","언론","언론정보","미디어커뮤니케이션","광고홍보","방송","미디어","커뮤니케이션","광고","홍보","저널리즘","영상미디어","콘텐츠","미디어콘텐츠","문화콘텐츠","미디어·신문방송"],learn:["미디어 이론","광고·홍보 기획","영상·글 제작","조사·여론 분석"],hs:["사회와 문화","독서와 작문","문학과 영상","정치"],hard:"공모전·팀 프로젝트가 부담스러운 사람",math:"low",grad:false,license:false,parts:[{name:"신문방송",note:"기사·방송 콘텐츠를 취재하고 만드는 일. 언론사·방송사 쪽으로 감"},{name:"광고홍보",note:"브랜드를 알리는 기획·마케팅 일. 광고대행사·기업 홍보팀으로 감"}]},
+  {id:"design",name:"시각·산업·패션디자인",group:"예체능",tier:"C",trend:"down",one:"단순 작업은 AI와 경쟁",score:{job:3,safe:2,pay:2,future:2},why:["AI가 이미지를 만들며 단순 작업 의뢰가 줄어듦","UX·제품 디자인처럼 기획까지 하는 일은 수요 있음","학교 이름보다 포트폴리오가 더 중요함"],risk:"프리랜서가 많아 수입이 불안정함",tip:"AI 도구 쓰는 법과 기획력을 함께 키우기",paths:["UX·UI 디자이너","제품·패키지 디자인","브랜드·광고 디자인","프리랜서"],src:[0],alias:["시각디자인","산업디자인","UX","UI","패션디자인","디자인학과","영상디자인","패션","제품디자인","공간디자인","환경디자인","멀티미디어","애니메이션","만화","웹툰","사진","사진영상","캐릭터","의류","의류학","의상","의상학","패션마케팅","섬유","디자인"],learn:["디자인 기초(조형·색채)","타이포그래피·레이아웃","디지털 툴 실습","포트폴리오 제작"],hs:["미술","미술 창작","정보"],hard:"계속 평가받는 작업 과정이 부담스러운 사람",math:"low",grad:false,license:false,parts:[{name:"시각디자인",note:"로고·포스터·앱 화면 같은 화면 속 디자인. 브랜드·UX 일로 감"},{name:"산업디자인",note:"가전·가구 같은 물건의 모양과 쓰임을 설계. 제조사·디자인 회사로 감"},{name:"패션디자인",note:"옷과 소품을 기획하고 만듦. 의류 브랜드·유통사로 감"}]},
+  {id:"agri",name:"농학·원예·축산",group:"자연",tier:"C",trend:"flat",one:"스마트팜·식품으로 길이 넓어짐",score:{job:2,safe:2,pay:2,future:4},why:["스마트팜·식품 회사 쪽으로 일자리가 넓어지는 중","농업 공무원·공기업 길이 있음","연구직은 대학원 출신을 많이 뽑음"],risk:"일터가 지방에 많은 편",tip:"식품·데이터 같은 다른 분야 수업도 들어 두기",paths:["식품 회사","농업 공무원·공기업","스마트팜 회사","연구소"],src:[0],alias:["농학","농업","농생명과학","원예","스마트팜","축산","산림","식물자원","동물자원","반려동물","펫","산림자원","임학","바이오시스템","생명자원","수산","수산학","수산생명","식물의학","농생명"],learn:["작물학·원예학","토양·비료학","동물생산(축산)","농업 경영·스마트팜"],hs:["생명과학","화학","지구시스템과학","기후변화와 환경생태"],hard:"야외에서 계절 따라 일하는 게 부담스러운 사람",math:"low",grad:true,license:false,parts:[{name:"농학",note:"작물 재배와 품종·토양을 다룸. 농업 연구·공무원·종자 회사로 감"},{name:"원예",note:"과수·채소·화훼를 다룸. 스마트팜·유통·조경 쪽으로 넓힘"},{name:"축산",note:"가축 사육과 번식·사료를 다룸. 축산 기업·검역·연구로 감"}]},
+  {id:"tourism",name:"관광·호텔",group:"사회",tier:"C",trend:"flat",one:"취업은 되지만 월급이 낮은 편",score:{job:3,safe:2,pay:1,future:3},why:["호텔·여행사는 월급이 낮은 편","코로나 때처럼 바깥 사건에 업계 전체가 흔들림","외국어 실력이 있으면 길이 넓어짐"],risk:"경기·사건에 업계 전체가 흔들림",tip:"외국어 하나는 확실하게 해 두기",paths:["호텔·리조트","여행사·항공사","관광 공기업","외식·서비스 회사"],src:[0],alias:["관광","호텔","호텔경영","관광경영","컨벤션","호텔관광","관광학","관광경영학","관광개발","레저","MICE","리조트","호텔관광경영","관광통역","관광영어"],learn:["관광학 개론","호텔 운영·객실 관리","여행 상품 기획","관광 외국어"],hs:["영어Ⅰ","세계시민과 지리","사회와 문화","중국어"],hard:"서비스업 교대 근무가 부담스러운 사람",math:"low",grad:false,license:false,parts:[{name:"관광",note:"여행 상품 기획·가이드·지역 관광 개발. 여행사·관광공사 쪽으로 감"},{name:"호텔",note:"객실·식음·예약 운영. 호텔·리조트·컨벤션 쪽으로 감"}]},
+  {id:"sports",name:"체육·스포츠",group:"예체능",tier:"C",trend:"flat",one:"자격증 쌓으면 길이 보임",score:{job:3,safe:2,pay:2,future:3},why:["생활스포츠지도사 같은 자격증 길이 있음","건강 관심이 커져 운동 지도 수요가 있음","체육 교사는 임용시험 경쟁이 셈"],risk:"선수·지도자는 사람마다 수입 차이가 매우 큼",tip:"자격증 2개 이상과 재활·트레이닝 지식 쌓기",paths:["트레이너·운동 지도자","체육 교사","스포츠 마케팅","경찰·소방 공무원"],src:[0],alias:["체육","체육학","체육교육","스포츠","생활체육","운동처방","스포츠과학","태권도","스포츠경영","스포츠레저","스포츠산업","스포츠마케팅","레저스포츠","무도","골프","건강운동","스포츠의학","스포츠지도","사회체육"],learn:["운동생리학","운동역학","스포츠 심리·사회","트레이닝 방법"],hs:["체육1","체육2","운동과 건강","생명과학"],hard:"몸을 쓰는 실기와 체력 훈련이 힘든 사람",math:"low",grad:false,license:false,parts:[{name:"체육교육",note:"학교 체육 교사를 준비하는 과정. 임용시험이 핵심"},{name:"스포츠과학·지도",note:"운동 지도·트레이닝·스포츠 산업 중심. 생활스포츠지도사 등 자격으로 감"}]},
+  {id:"urban",name:"도시공학·지리",group:"공학",tier:"C",trend:"down",one:"건설 불황, 공공 일이 버팀목",score:{job:2,safe:3,pay:3,future:2},why:["건설 불황으로 대형 건설사 직원이 줄어듦(더팩트·2025)","도시계획·지도(GIS) 일은 공공기관이 많이 함","도시계획기사·측량 자격으로 공무원 지원 가능"],risk:"건설·부동산 경기에 따라 일감이 크게 바뀜",tip:"GIS 같은 지도 데이터 프로그램 실력 쌓기",paths:["도시계획직 공무원","토지·주택 공기업","도시계획 설계 회사","지도·공간정보 회사"],src:[0,9],alias:["도시공학","도시계획","지리","지리학","지리교육","GIS","공간정보","지적","지적학","측량","지리정보","도시재생","교통","교통공학","도시교통"],learn:["도시계획","지리정보시스템(GIS)","교통·토지이용","도시 설계"],hs:["도시의 미래 탐구","한국지리 탐구","세계시민과 지리","확률과 통계"],hard:"지도와 자료를 오래 들여다보는 일이 답답한 사람",math:"mid",grad:false,license:false,parts:[{name:"도시공학",note:"도시계획·교통·개발을 설계. 공공기관·엔지니어링사로 감"},{name:"지리",note:"공간 자료와 지역을 분석. GIS·측량·교사 쪽으로 감"}]},
+  {id:"game",name:"게임",group:"공학",tier:"C",trend:"down",one:"포트폴리오가 학위보다 중요",score:{job:2,safe:1,pay:3,future:3},why:["국내 게임 이용률 50.2%, 조사 시작 뒤 가장 낮음(아시아경제·2026)","게임 회사들이 인력을 줄이며 몸집을 줄이는 중","만든 게임 결과물이 취업에서 가장 중요"],risk:"회사 흥행에 따라 일자리가 흔들림",tip:"혼자든 팀이든 완성한 게임을 꼭 남기기",paths:["게임 개발자(프로그래밍)","게임 기획자","게임 그래픽","IT 개발자로 전환"],src:[0,21],alias:["게임공학","게임학","게임개발","게임콘텐츠","게임디자인","e스포츠","이스포츠","게임그래픽"],learn:["프로그래밍","게임 엔진(유니티 등)","그래픽·사운드 기초","게임 기획"],hs:["정보","대수","미술"],hard:"만든 결과물을 계속 고쳐야 하는 일이 싫은 사람",math:"mid",grad:false,license:false},
+  {id:"nutrition",name:"식품영양",group:"자연",tier:"C",trend:"flat",one:"영양사 면허가 기본 무기",score:{job:3,safe:3,pay:2,future:3},why:["영양사 면허로 학교·병원·급식 회사에 감","2027 영양교사 261명 선발 예고(머니투데이·2026)","식품 회사 연구·품질관리 길도 있음"],risk:"급식 영양사는 월급이 낮은 편",tip:"영양교사를 원하면 교직 이수 가능 여부부터 확인",paths:["영양교사","병원·급식 영양사","식품 회사(연구·품질)","보건소·공무원"],src:[0,23],alias:["식품영양학","영양","영양사","식품공학","식품과학","식품","식품생명","급식","영양교사","식품가공"],learn:["영양학","식품화학","급식관리","생화학"],hs:["생명과학","화학","화학 반응의 세계","생활과학 탐구"],hard:"식품 화학과 실험이 부담스러운 사람",math:"low",grad:false,license:true},
+  {id:"earthsci",name:"지구과학·해양",group:"자연",tier:"C",trend:"flat",one:"연구직은 대학원, 공무원 길도",score:{job:2,safe:2,pay:3,future:3},why:["기상·지질·해양 연구직은 석·박사를 많이 뽑음","땅속부터 대기·바다까지 자연 현상을 관측해 푸는 학문","기상직·해양수산직 공무원 길이 있음"],risk:"학사만으로 갈 수 있는 민간 회사가 적음",tip:"기상·해양 공무원과 대학원 중 일찍 정하기",paths:["기상·해양 공무원","연구소","지질·환경 조사 회사","과학 교사"],src:[0,35],alias:["지구과학","지구환경과학","천문","천문학","우주과학","대기과학","기상","해양학","해양과학","지질","대기","천문우주","해양생명","지구시스템","지질학"],learn:["지질학","대기과학·기상","해양과학","지구물리"],hs:["지구시스템과학","물리학","미적분Ⅰ"],hard:"야외 조사와 관측 자료 분석이 부담스러운 사람",math:"mid",grad:true,license:false,parts:[{name:"지구과학",note:"암석·지층·우주를 다룸. 연구소·교사·지질조사 쪽으로 감"},{name:"대기과학(기상)",note:"날씨와 기후를 예측함. 기상청·예보 업체로 감"},{name:"해양",note:"바다의 물리·화학·생물을 다룸. 해양 연구기관·해양수산직으로 감"}]},
+  {id:"welfare",name:"사회복지",group:"사회",tier:"C",trend:"flat",one:"일자리는 많고 처우는 아쉬움",score:{job:3,safe:3,pay:1,future:3},why:["사회복지사 자격으로 복지관·시설·공무원에 감","2026 복지시설 종사자 기본급 3.5% 인상(헤럴드경제·2025)","종사자 10명 중 7명이 이직 생각(뉴시스·2025)"],risk:"일에 비해 월급이 낮고 감정 소모가 큼",tip:"사회복지직 공무원 시험도 같이 알아 두기",paths:["사회복지직 공무원","복지관·복지시설","병원·학교 사회복지사","공공기관"],src:[0,25,26],alias:["사회복지학","복지","사회복지사","노인복지","청소년복지","사회사업","상담복지","청소년학","청소년지도","평생교육","사회서비스"],learn:["사회복지 개론","사회복지 실천 기술","인간행동과 사회환경","사회복지 현장 실습"],hs:["사회와 문화","윤리와 사상","독서와 작문","법과 사회"],hard:"다른 사람의 어려움을 오래 듣기 힘든 사람",math:"low",grad:false,license:true},
+  {id:"libinfo",name:"문헌정보",group:"사회",tier:"C",trend:"flat",one:"사서 자격, 자리는 적은 편",score:{job:2,safe:3,pay:2,future:3},why:["정사서 자격은 받지만 사서 자리가 적음","2027 사서교사 102명 선발 예고(머니투데이·2026)","도서관 밖 자료·데이터 관리 일로도 이어짐"],risk:"공공 도서관 자리가 적어 경쟁이 셈",tip:"사서직 공무원과 데이터 관리 실력 함께 준비",paths:["사서직 공무원","사서교사","대학·기업 도서관","기록물·데이터 관리"],src:[0,23],alias:["문헌정보학","도서관","사서","기록관리","문헌정보학과","사서교사","정보관리"],learn:["정보 조직(분류·목록)","정보 검색","도서관 경영","독서 지도"],hs:["독서와 작문","문학","정보","주제 탐구 독서"],hard:"꼼꼼한 분류·정리 일이 답답한 사람",math:"low",grad:false,license:true},
+  {id:"polsoc",name:"정치외교·사회학",group:"사회",tier:"C",trend:"flat",one:"넓게 배우고 진로는 스스로",score:{job:2,safe:2,pay:3,future:2},why:["전공과 바로 이어지는 직업은 적은 편","공무원·공기업·언론·연구소로 많이 감","조사·분석 힘은 기획·마케팅 일에서도 쓰임"],risk:"전공만으로는 내 강점을 보여 주기 어려움",tip:"통계·외국어 같은 무기 하나를 더 키우기",paths:["공무원·외교관","공기업","언론·연구소","기업 기획·조사"],src:[0],alias:["정치외교","정치외교학","정치학","외교","국제관계","사회학","사회과학","정외","인류학","문화인류학","지역학","국제학","국제지역학","북한학","통일","사회과학부"],learn:["정치학 개론","국제관계론","사회학 이론","사회조사방법"],hs:["정치","사회와 문화","국제 관계의 이해","확률과 통계"],hard:"긴 글을 읽고 토론하는 일이 부담스러운 사람",math:"low",grad:true,license:false,parts:[{name:"정치외교",note:"정치 제도와 국제 관계를 다룸. 공무원·외교·언론·연구 쪽으로 감"},{name:"사회학",note:"사회 현상을 조사·분석. 조사 업체·기획·연구소로 감"}]},
+  {id:"cabin",name:"항공서비스",group:"사회",tier:"C",trend:"flat",one:"승무원 공채는 있지만 경쟁 셈",score:{job:3,safe:2,pay:2,future:2},why:["대한항공 통합 항공사 앞두고 신입 승무원 공채(이코노미스트·2025)","항공 업계는 전염병·유가 같은 바깥 사건에 흔들림","외국어 성적과 면접 준비가 중요"],risk:"경기·사건에 따라 채용이 갑자기 멈출 수 있음",tip:"외국어 하나는 확실히, 호텔·서비스 길도 함께",paths:["객실승무원","공항 지상직","호텔·여행사","서비스 교육 강사"],src:[0,37],alias:["항공서비스","항공관광","승무원","항공경영","항공운항서비스","항공서비스학과","공항","공항서비스","객실승무원","항공객실"],learn:["항공 서비스 이론","기내 안전·응급처치","항공 실무 외국어","서비스 매너·이미지"],hs:["영어Ⅰ","영어 발표와 토론","중국어"],hard:"체력과 서비스 면접 준비가 부담스러운 사람",math:"low",grad:false,license:false},
+  {id:"earlyedu",name:"유아교육·아동학",group:"교육",tier:"C",trend:"down",one:"아이 줄며 유치원도 줄어",score:{job:3,safe:3,pay:2,future:1},why:["유치원 8555곳→7435곳, 9년 새 줄어(베이비뉴스·2026)","2027 유치원 교사 592명 선발, 76명 줄어(머니투데이·2026)","최근 출생아는 늘어 감소 속도는 지켜볼 일"],risk:"사립 유치원·어린이집은 월급이 낮은 편",tip:"임용 말고 아동 콘텐츠·상담 길도 함께 보기",paths:["유치원 교사","어린이집 교사","아동 교육 콘텐츠 회사","아동 상담·복지 기관"],src:[0,23,24],alias:["유아교육","유아교육과","유치원교사","아동학","아동가족","보육","아동보육","아동복지","유아","어린이","아동학과","보육교사"],learn:["영유아 발달","보육·유아교육 과정","유아 놀이 지도","보육 실습"],hs:["사회와 문화","아동발달과 부모","음악","미술"],hard:"어린 아이와 하루 종일 지내기 힘든 사람",math:"low",grad:false,license:true},
+  {id:"culinary",name:"조리·외식",group:"예체능",tier:"C",trend:"flat",one:"일자리는 많고 월급·체력이 관건",score:{job:3,safe:2,pay:2,future:3},why:["2025년 외식업 폐업 11만4159곳이 인허가 9만7296곳보다 많음(한국경제·2026)","외식업 매출이 4년 만에 줄고 고용도 둔화됨(뉴시스·2025)","단체급식·식품 회사로도 갈 수 있음"],risk:"조리 현장은 근무가 길고 체력 부담이 큼",tip:"조리기능사 같은 자격증과 호텔·단체급식 실습 경험 쌓기",paths:["호텔·리조트 조리","외식 브랜드·프랜차이즈 본사","단체급식·식품 회사","본인 가게 창업"],src:[0,38,39],alias:["호텔조리","조리","조리과학","외식조리","조리학과","조리학","제과제빵","제빵","제과","베이킹","바리스타","셰프","요리","조리제과제빵","한식조리","외식","외식경영","외식산업","푸드","푸드서비스","식음료","외식창업"],learn:["조리 실습(한·양·중·일식)","식품위생","메뉴 개발","외식 경영"],hs:["생활과학 탐구","화학","경제"],hard:"서서 일하는 긴 시간이 힘든 사람",math:"low",grad:false,license:false,parts:[{name:"조리",note:"요리 기술과 메뉴 개발 중심. 호텔·레스토랑·단체급식으로 감"},{name:"외식경영",note:"매장 운영·창업·메뉴 기획 중심. 프랜차이즈·외식 기업으로 감"}]},
+  {id:"beauty",name:"뷰티·미용(헤어·피부)",group:"예체능",tier:"C",trend:"flat",one:"면허는 빨리 따도 폐업·경쟁이 큼",score:{job:3,safe:2,pay:2,future:2},why:["2024년 미용업 폐업 1만3284곳, 1년 새 5.25% 늘어(한국경제·2025)","집에서 직접 하는 셀프 네일이 늘어 네일 가게가 특히 힘듦(한국경제·2025)","학생이 가장 많이 준비하는 기능사가 미용사(일반)라 진입 경쟁이 센 편(SBS Biz·2026)"],risk:"미용실·피부관리실 창업 문턱은 낮은 편이지만 경쟁이 세고 초반 월급이 낮은 편",tip:"미용사 면허(일반·피부·네일)를 학교 다니며 따고, 매장 경험으로 한 분야 실력 쌓기",paths:["미용실 헤어디자이너","피부관리실·에스테틱","메이크업·네일 아티스트","본인 매장 창업"],src:[0,41,42],alias:["뷰티","미용","헤어","메이크업","피부미용","에스테틱","네일","뷰티케어","미용예술","미용학","뷰티미용","피부관리","미용사","뷰티산업","뷰티코디","네일아트"],learn:["피부학","헤어·메이크업·네일 실습","미용 위생·법규","공중보건"],hs:["미술","생명과학","생활과학 탐구"],hard:"손으로 반복하는 실기가 답답한 사람",math:"low",grad:false,license:true,parts:[{name:"헤어",note:"커트·펌·염색 같은 머리 시술. 미용실 근무·개업 중심"},{name:"피부·메이크업",note:"피부 관리와 화장 기술. 피부관리실·방송·화장품 업계로 감"},{name:"네일",note:"손톱 관리와 아트. 네일숍 중심이고 자영업 비중이 큼"}]},
 
   // ===== D =====
-  {id:"english",name:"영어영문",group:"인문",tier:"D",trend:"down",one:"영어+다른 전공이면 강해짐",score:{job:2,safe:1,pay:2,future:2},why:["인문 계열 취업률 61.1%, 7개 계열 중 가장 낮음(교육부·2025)","번역 업무 일부가 AI로 자동화되는 중","영어 실력은 다른 전공과 합치면 힘이 큼","서강대 인문 취업률은 73.4%로 학교별 차이 큼(생글생글·2026)"],risk:"영어만으로는 남과 다른 점이 되기 어려움",tip:"경영·통계 같은 복수전공을 함께 하기",paths:["해외영업·무역","영어 교사","통번역(대학원)","외국계 회사"],src:[0,12],alias:["영문","영어","영문과","영어영문학","영어학","영어통번역","통번역","통역","영미","영미문학","영미어문","영어통역"]},
-  {id:"korean",name:"국어국문·문예창작",group:"인문",tier:"D",trend:"flat",one:"글쓰기 힘을 다른 일에 쓰기",score:{job:2,safe:1,pay:2,future:2},why:["인문 계열 취업률 61.1%(교육부·2025)","글쓰기 실력은 기획·홍보·출판 일에서 쓰임","국어 교사는 임용시험 경쟁이 셈","학교와 본인 준비에 따라 결과 차이가 큼"],risk:"전공만으로 바로 갈 수 있는 회사가 적음",tip:"복수전공이나 글·콘텐츠 포트폴리오 준비",paths:["출판·편집","기업 홍보·카피라이터","국어 교사","한국어 강사"],src:[0],alias:["국문과","국어국문학","문예창작","국어학","한국어","한국어교육","한국어문","국어","문창","문학","한문","한문학","한문교육","언어학","국문","국어국문"]},
-  {id:"history",name:"역사·사학·고고학",group:"인문",tier:"D",trend:"flat",one:"길은 있지만 자리가 적음",score:{job:2,safe:1,pay:2,future:2},why:["인문 계열 취업률 61.1%(교육부·2025)","학예사·공무원·교사 길은 있으나 자리가 적음","자료를 찾고 정리하는 힘은 어디서나 쓰임","같은 인문도 서울대 70.3%, 서강대 73.4%(생글생글·2026)"],risk:"전공과 바로 이어지는 일자리가 적음",tip:"학예사·공무원 등 목표를 일찍 정하기",paths:["학예사(박물관)","공무원","역사 교사","출판·콘텐츠"],src:[0,12],alias:["사학과","역사","역사학","고고학","한국사","국사","고고미술사","문화재","문화유산","고고미술","한국사학","동양사","서양사","역사문화","사학"]},
-  {id:"philosophy",name:"철학",group:"인문",tier:"D",trend:"flat",one:"생각하는 힘, 복수전공과 짝",score:{job:2,safe:1,pay:2,future:2},why:["인문 계열 취업률 61.1%(교육부·2025)","생각을 논리적으로 정리하는 힘을 기름","로스쿨·대학원 진학 길로도 쓰임","AI 윤리처럼 새 분야와 이어지기도 함"],risk:"전공 이름만으로는 취업 연결이 약함",tip:"법·경영·컴공 같은 복수전공으로 힘 살리기",paths:["로스쿨","대학원","기획·컨설팅","교사·강사"],src:[0],alias:["철학과","윤리","철학과윤리","미학","종교","기독교","선교","종교학","신학","불교학","동양철학","유학"]},
-  {id:"realestate",name:"부동산",group:"사회",tier:"D",trend:"down",one:"거래가 줄며 중개 일도 줄어",score:{job:2,safe:1,pay:2,future:2},why:["사회 계열 취업률 69.0%(교육부·2025)","영업 중인 공인중개사 11만 명 아래로 줄어(뉴스토마토·2025)","공인중개사는 전공과 상관없이 누구나 시험 봄","감정평가사가 되면 전문직 길이 있음"],risk:"부동산 경기에 따라 일감이 크게 흔들림",tip:"감정평가사 같은 전문 자격이나 금융 공부 더하기",paths:["감정평가사","부동산 개발·자산관리 회사","금융사 부동산팀","공인중개사"],src:[0,32],alias:["부동산학","공인중개사","감정평가","부동산개발","도시부동산","부동산학과","부동산금융","부동산경영","공인중개"]},
-  {id:"asianlang",name:"중어중문·일어일문",group:"인문",tier:"D",trend:"flat",one:"언어+다른 전공이면 강해짐",score:{job:2,safe:1,pay:2,future:2},why:["인문 계열 취업률 61.1%(교육부·2025)","2022~2025년 4년간 서울 대학에서 중국어 50개·일본어 49개 학과가 없어지거나 합쳐짐(세계일보·2025)","중국·일본과 거래하는 회사는 꾸준히 있음","번역 일 일부는 AI가 대신하는 중"],risk:"언어만으로는 남과 다른 점이 되기 어려움",tip:"경영·무역 같은 복수전공과 어학 자격증 함께",paths:["해외영업·무역","관광·항공","통번역(대학원)","외국계·현지 회사"],src:[0,33],alias:["중어중문","중국어","중국학","중문과","일어일문","일본어","일본학","일문과","동양어","중국어문","일본어문","중어중문학","일어일문학","중국언어","아시아어","동아시아","베트남어","아랍어","태국어","인도네시아어"]},
-  {id:"eurolang",name:"유럽어(불·독·스페인·러시아)",group:"인문",tier:"D",trend:"down",one:"학과는 줄고 언어는 희소해짐",score:{job:2,safe:1,pay:2,future:2},why:["인문 계열 취업률 61.1%(교육부·2025)","2022~2025년 4년간 서울 대학에서 독일어 19개·프랑스어 17개 학과가 없어지거나 합쳐짐(세계일보·2025)","하는 사람이 적은 언어라 맞는 자리에선 귀함","스페인어는 중남미 무역과도 이어짐"],risk:"언어를 쓰는 일자리 자체가 적음",tip:"경영·무역 복수전공과 현지 경험 쌓기",paths:["해외영업·무역","외국계 회사","통번역(대학원)","국제기구·대사관"],src:[0,33],alias:["불어불문","프랑스어","독어독문","독일어","스페인어","서어서문","러시아어","이탈리아어","유럽어문","노어노문","불문","독문","서문","노문","불문학","독문학","프랑스어문","독일어문","중남미","포르투갈어","불어","독어","프랑스","독일","러시아","유럽어(불·독·스페인어 등)"]},
-  {id:"film",name:"연극·영화·공연",group:"예체능",tier:"D",trend:"down",one:"드라마 편성이 줄어드는 중",score:{job:2,safe:1,pay:2,future:3},why:["예체능 계열 취업률 66.7%(교육부·2025)","방송사 드라마 편성 시간이 줄어듦(한국콘텐츠진흥원·2025)","작품마다 계약하는 일이라 수입이 들쭉날쭉","유튜브·숏폼 같은 새 영상 일은 늘어남"],risk:"작품이 없으면 수입도 없는 구조",tip:"연출·촬영·편집 중 하나를 깊게, 작품 꾸준히 남기기",paths:["배우·연출","촬영·편집 스태프","영상 콘텐츠 제작","공연 기획"],src:[0,36],alias:["연극","영화","연극영화과","연기","영화영상","방송연예","뮤지컬","공연예술","무용","무용학","연출","영상제작","공연","공연영상","실용무용","연극영화"]},
-  {id:"music",name:"음악·실용음악",group:"예체능",tier:"D",trend:"flat",one:"실력과 활동이 곧 경력",score:{job:2,safe:1,pay:2,future:2},why:["예체능 계열 취업률 66.7%(교육부·2025)","연주자·가수는 사람마다 수입 차이가 매우 큼","레슨·작곡·음향 같은 일로 넓힐 수 있음","학교 이름보다 공연·음원 같은 결과물이 중요"],risk:"프리랜서가 많아 수입이 불안정함",tip:"레슨·음향·작곡 등 돈이 되는 기술 하나 더하기",paths:["연주자·가수","레슨 강사","작곡·편곡","음향 엔지니어"],src:[0],alias:["음악","음악학","성악","피아노","작곡","기악","관현악","국악","실용음악","보컬","음향","음악교육","뮤직","실용음악과"]},
-  {id:"fineart",name:"미술·조형·공예",group:"예체능",tier:"D",trend:"flat",one:"작가의 길, 다른 일과 함께",score:{job:2,safe:1,pay:2,future:2},why:["예체능 계열 취업률 66.7%(교육부·2025)","작가 활동만으로 생활하는 사람은 적음","미술 교사·학원·디자인 쪽으로 넓히는 경우 많음","AI 그림이 늘며 작가만의 색이 더 중요"],risk:"수입이 불안정하고 사람마다 차이가 매우 큼",tip:"작품 기록과 디자인 프로그램 실력 함께 쌓기",paths:["작가","미술 교사·학원","디자인·일러스트","전시 기획(큐레이터)"],src:[0],alias:["미술","회화","서양화","동양화","조소","순수미술","판화","미술학","공예","조형","도예","섬유예술","서예","미술교육","현대미술"]}
+  {id:"english",name:"영어영문",group:"인문",tier:"D",trend:"down",one:"영어+다른 전공이면 강해짐",score:{job:2,safe:1,pay:2,future:2},why:["번역 업무 일부가 AI로 자동화되는 중","영어 실력은 다른 전공과 합치면 힘이 큼","서강대 인문 취업률은 73.4%로 학교별 차이 큼(생글생글·2026)"],risk:"영어만으로는 남과 다른 점이 되기 어려움",tip:"경영·통계 같은 복수전공을 함께 하기",paths:["해외영업·무역","영어 교사","통번역(대학원)","외국계 회사"],src:[0,12],alias:["영문","영어","영문과","영어영문학","영어학","영어통번역","통번역","통역","영미","영미문학","영미어문","영어통역"],learn:["영어학·언어학","영미문학","영작문·통번역","영어 교수법"],hs:["영어Ⅰ","영어 독해와 작문","영미 문학 읽기","독서와 작문"],hard:"긴 영어 글을 꾸준히 읽기 싫은 사람",math:"low",grad:false,license:false},
+  {id:"korean",name:"국어국문·문예창작",group:"인문",tier:"D",trend:"flat",one:"글쓰기 힘을 다른 일에 쓰기",score:{job:2,safe:1,pay:2,future:2},why:["글쓰기 실력은 기획·홍보·출판 일에서 쓰임","국어 교사는 임용시험 경쟁이 셈","학교와 본인 준비에 따라 결과 차이가 큼"],risk:"전공만으로 바로 갈 수 있는 회사가 적음",tip:"복수전공이나 글·콘텐츠 포트폴리오 준비",paths:["출판·편집","기업 홍보·카피라이터","국어 교사","한국어 강사"],src:[0],alias:["국문과","국어국문학","문예창작","국어학","한국어","한국어교육","한국어문","국어","문창","문학","한문","한문학","한문교육","언어학","국문","국어국문"],learn:["국어학","현대·고전문학","글쓰기·창작","문학 비평"],hs:["문학","독서와 작문","화법과 언어","주제 탐구 독서"],hard:"글을 읽고 쓰는 시간이 부담스러운 사람",math:"low",grad:false,license:false,parts:[{name:"국어국문",note:"국어학과 문학 연구 중심. 교사·출판·콘텐츠 기획으로 감"},{name:"문예창작",note:"시·소설·극본 같은 창작 실기 중심. 작가·콘텐츠·출판 쪽으로 감"}]},
+  {id:"history",name:"역사·사학·고고학",group:"인문",tier:"D",trend:"flat",one:"길은 있지만 자리가 적음",score:{job:2,safe:1,pay:2,future:2},why:["학예사·공무원·교사 길은 있으나 자리가 적음","자료를 찾고 정리하는 힘은 어디서나 쓰임","같은 인문도 서울대 70.3%, 서강대 73.4%(생글생글·2026)"],risk:"전공과 바로 이어지는 일자리가 적음",tip:"학예사·공무원 등 목표를 일찍 정하기",paths:["학예사(박물관)","공무원","역사 교사","출판·콘텐츠"],src:[0,12],alias:["사학과","역사","역사학","고고학","한국사","국사","고고미술사","문화재","문화유산","고고미술","한국사학","동양사","서양사","역사문화","사학"],learn:["한국사","동아시아사","서양사","사료 읽기·연구방법"],hs:["세계사","동아시아 역사 기행","역사로 탐구하는 현대 세계","독서와 작문"],hard:"옛 문헌과 자료를 오래 읽기 싫은 사람",math:"low",grad:true,license:false,parts:[{name:"역사·사학",note:"사료로 과거를 연구. 교사·학예사·공무원·연구소 쪽으로 감"},{name:"고고학",note:"유적·유물을 발굴하고 분석. 문화재 조사기관·박물관으로 감"}]},
+  {id:"philosophy",name:"철학",group:"인문",tier:"D",trend:"flat",one:"생각하는 힘, 복수전공과 짝",score:{job:2,safe:1,pay:2,future:2},why:["생각을 논리적으로 정리하는 힘을 기름","로스쿨·대학원 진학 길로도 쓰임","AI 윤리처럼 새 분야와 이어지기도 함"],risk:"전공 이름만으로는 취업 연결이 약함",tip:"법·경영·컴공 같은 복수전공으로 힘 살리기",paths:["로스쿨","대학원","기획·컨설팅","교사·강사"],src:[0],alias:["철학과","윤리","철학과윤리","미학","종교","기독교","선교","종교학","신학","불교학","동양철학","유학"],learn:["논리학","서양철학사","동양철학","윤리학"],hs:["윤리와 사상","독서와 작문","문학"],hard:"정답이 없는 질문을 오래 붙잡기 싫은 사람",math:"low",grad:true,license:false},
+  {id:"realestate",name:"부동산",group:"사회",tier:"D",trend:"down",one:"거래가 줄며 중개 일도 줄어",score:{job:2,safe:1,pay:2,future:2},why:["영업 중인 공인중개사 11만 명 아래로 줄어(뉴스토마토·2025)","공인중개사는 전공과 상관없이 누구나 시험 봄","감정평가사가 되면 전문직 길이 있음"],risk:"부동산 경기에 따라 일감이 크게 흔들림",tip:"감정평가사 같은 전문 자격이나 금융 공부 더하기",paths:["감정평가사","부동산 개발·자산관리 회사","금융사 부동산팀","공인중개사"],src:[0,32],alias:["부동산학","공인중개사","감정평가","부동산개발","도시부동산","부동산학과","부동산금융","부동산경영","공인중개"],learn:["부동산학원론","부동산 법규","부동산 투자·금융","감정평가 이론"],hs:["경제","법과 사회","금융과 경제생활","확률과 통계"],hard:"법규와 시장 변화를 꾸준히 따라가기 싫은 사람",math:"mid",grad:false,license:false},
+  {id:"asianlang",name:"중어중문·일어일문",group:"인문",tier:"D",trend:"flat",one:"언어+다른 전공이면 강해짐",score:{job:2,safe:1,pay:2,future:2},why:["2022~2025년 4년간 서울 대학에서 중국어 50개·일본어 49개 학과가 없어지거나 합쳐짐(세계일보·2025)","중국·일본과 거래하는 회사는 꾸준히 있음","번역 일 일부는 AI가 대신하는 중"],risk:"언어만으로는 남과 다른 점이 되기 어려움",tip:"경영·무역 같은 복수전공과 어학 자격증 함께",paths:["해외영업·무역","관광·항공","통번역(대학원)","외국계·현지 회사"],src:[0,33],alias:["중어중문","중국어","중국학","중문과","일어일문","일본어","일본학","일문과","동양어","중국어문","일본어문","중어중문학","일어일문학","중국언어","아시아어","동아시아","베트남어","아랍어","태국어","인도네시아어"],learn:["어학 실습(말하기·쓰기)","문법·어휘","해당 국가 문학·문화","통번역 기초"],hs:["중국어","일본어","세계사","독서와 작문"],hard:"외국어 단어를 꾸준히 외우기 힘든 사람",math:"low",grad:false,license:false,parts:[{name:"중어중문",note:"중국어와 중국 문학·문화를 배움. 중국 관련 무역·제조 업체로 감"},{name:"일어일문",note:"일본어와 일본 문학·문화를 배움. 일본 거래 기업·관광·콘텐츠로 감"}]},
+  {id:"eurolang",name:"유럽어(불·독·스페인·러시아)",group:"인문",tier:"D",trend:"down",one:"학과는 줄고 언어는 희소해짐",score:{job:2,safe:1,pay:2,future:2},why:["2022~2025년 4년간 서울 대학에서 독일어 19개·프랑스어 17개 학과가 없어지거나 합쳐짐(세계일보·2025)","하는 사람이 적은 언어라 맞는 자리에선 귀함","스페인어는 중남미 무역과도 이어짐"],risk:"언어를 쓰는 일자리 자체가 적음",tip:"경영·무역 복수전공과 현지 경험 쌓기",paths:["해외영업·무역","외국계 회사","통번역(대학원)","국제기구·대사관"],src:[0,33],alias:["불어불문","프랑스어","독어독문","독일어","스페인어","서어서문","러시아어","이탈리아어","유럽어문","노어노문","불문","독문","서문","노문","불문학","독문학","프랑스어문","독일어문","중남미","포르투갈어","불어","독어","프랑스","독일","러시아","유럽어(불·독·스페인어 등)"],learn:["어학 실습(말하기·쓰기)","문법·어휘","해당 국가 문학·문화","통번역 기초"],hs:["독일어","프랑스어","스페인어","세계사"],hard:"낯선 언어를 처음부터 시작하기 부담스러운 사람",math:"low",grad:false,license:false,parts:[{name:"불어불문",note:"프랑스어와 문화 중심. 패션·화장품·외교·교육 쪽으로 감"},{name:"독어독문",note:"독일어와 문화 중심. 독일계 기업·기계·자동차 업계로 감"},{name:"스페인어",note:"스페인어권과 중남미 문화 중심. 무역·관광·콘텐츠로 감"},{name:"러시아어",note:"러시아·중앙아시아 문화 중심. 무역·에너지·외교 쪽으로 감"}]},
+  {id:"film",name:"연극·영화·공연",group:"예체능",tier:"D",trend:"down",one:"드라마 편성이 줄어드는 중",score:{job:2,safe:1,pay:2,future:3},why:["방송사 드라마 편성 시간이 줄어듦(한국콘텐츠진흥원·2025)","작품마다 계약하는 일이라 수입이 들쭉날쭉","유튜브·숏폼 같은 새 영상 일은 늘어남"],risk:"작품이 없으면 수입도 없는 구조",tip:"연출·촬영·편집 중 하나를 깊게, 작품 꾸준히 남기기",paths:["배우·연출","촬영·편집 스태프","영상 콘텐츠 제작","공연 기획"],src:[0,36],alias:["연극","영화","연극영화과","연기","영화영상","방송연예","뮤지컬","공연예술","무용","무용학","연출","영상제작","공연","공연영상","실용무용","연극영화"],learn:["연기·연출 실습","영화·연극사","시나리오·극작","공연 제작"],hs:["연극","연극과 삶","문학과 영상"],hard:"무대·현장에서 남 앞에 서는 게 부담스러운 사람",math:"low",grad:false,license:false,parts:[{name:"연극·공연",note:"무대 연기·연출·제작. 극단·공연 기획사로 감"},{name:"영화",note:"영상 연출·촬영·편집 중심. 영화·드라마·영상 제작사로 감"}]},
+  {id:"music",name:"음악·실용음악",group:"예체능",tier:"D",trend:"flat",one:"실력과 활동이 곧 경력",score:{job:2,safe:1,pay:2,future:2},why:["연주자·가수는 사람마다 수입 차이가 매우 큼","레슨·작곡·음향 같은 일로 넓힐 수 있음","학교 이름보다 공연·음원 같은 결과물이 중요"],risk:"프리랜서가 많아 수입이 불안정함",tip:"레슨·음향·작곡 등 돈이 되는 기술 하나 더하기",paths:["연주자·가수","레슨 강사","작곡·편곡","음향 엔지니어"],src:[0],alias:["음악","음악학","성악","피아노","작곡","기악","관현악","국악","실용음악","보컬","음향","음악교육","뮤직","실용음악과"],learn:["악기·보컬 실기","음악 이론·화성학","시창·청음","음악사"],hs:["음악","음악 연주와 창작","음악 감상과 비평"],hard:"매일 실기 연습 시간을 내기 힘든 사람",math:"low",grad:false,license:false,parts:[{name:"클래식(순수음악)",note:"연주·성악·작곡 실기 중심. 연주자·교사·오케스트라 쪽으로 감"},{name:"실용음악",note:"보컬·밴드·작편곡·음향 실습. 공연·음원 제작·레슨 쪽으로 감"}]},
+  {id:"fineart",name:"미술·조형·공예",group:"예체능",tier:"D",trend:"flat",one:"작가의 길, 다른 일과 함께",score:{job:2,safe:1,pay:2,future:2},why:["작가 활동만으로 생활하는 사람은 적음","미술 교사·학원·디자인 쪽으로 넓히는 경우 많음","AI 그림이 늘며 작가만의 색이 더 중요"],risk:"수입이 불안정하고 사람마다 차이가 매우 큼",tip:"작품 기록과 디자인 프로그램 실력 함께 쌓기",paths:["작가","미술 교사·학원","디자인·일러스트","전시 기획(큐레이터)"],src:[0],alias:["미술","회화","서양화","동양화","조소","순수미술","판화","미술학","공예","조형","도예","섬유예술","서예","미술교육","현대미술"],learn:["드로잉·조형 기초","회화·조각·공예 실기","미술사","현대미술론"],hs:["미술","미술 창작","미술 감상과 비평"],hard:"작업 평가와 비교가 부담스러운 사람",math:"low",grad:false,license:false,parts:[{name:"회화·조형",note:"그림·조각 같은 순수미술 작업. 작가·전시·미술 교육 쪽으로 감"},{name:"공예",note:"도자·금속·섬유 같은 손작업. 공방·작가·제품 제작으로 감"}]}
 ];
 
 const META = {
@@ -538,6 +620,73 @@ const META = {
       "name": "코스모닝 · 화장품 책임판매업자 2만8412곳, 제조업자 4158곳(2025년 말)",
       "url": "https://cosmorning.com/mobile/article.html?no=52185"
     }
+  ],
+  "confuse": [
+    {
+      "a": "cs",
+      "b": "ai",
+      "text": "컴공은 소프트웨어 전반, AI는 학습·모델 중심"
+    },
+    {
+      "a": "cs",
+      "b": "datasci",
+      "text": "컴공은 만드는 쪽, 데이터는 분석하는 쪽"
+    },
+    {
+      "a": "semiconductor",
+      "b": "electrical",
+      "text": "반도체는 칩·소자, 전기는 전력·제어 중심"
+    },
+    {
+      "a": "chemical",
+      "b": "materials",
+      "text": "화공은 공정·반응, 신소재는 재료의 성질"
+    },
+    {
+      "a": "mechanical",
+      "b": "industrial",
+      "text": "기계는 물건 설계, 산업공학은 일하는 방식 설계"
+    },
+    {
+      "a": "business",
+      "b": "economics",
+      "text": "경영은 회사 운영, 경제는 시장·사회 흐름"
+    },
+    {
+      "a": "publicadmin",
+      "b": "polsoc",
+      "text": "행정은 정부 운영·정책, 정치외교는 정치·국제관계"
+    },
+    {
+      "a": "biology",
+      "b": "biomed",
+      "text": "생명과학은 원리 탐구, 의공·바이오는 의료 응용"
+    },
+    {
+      "a": "nutrition",
+      "b": "culinary",
+      "text": "식품영양은 영양 관리, 조리는 요리 기술"
+    },
+    {
+      "a": "media",
+      "b": "film",
+      "text": "미디어는 기획·전달, 연극영화는 실기·제작"
+    },
+    {
+      "a": "cosmetic",
+      "b": "beauty",
+      "text": "향장과학은 연구·제조, 뷰티는 시술·실기"
+    },
+    {
+      "a": "nursing",
+      "b": "emt",
+      "text": "간호는 병원 돌봄, 응급구조는 현장 응급처치"
+    },
+    {
+      "a": "architecture",
+      "b": "civil",
+      "text": "건축은 건물 설계, 토목은 도로·다리 같은 기반 시설"
+    }
   ]
 };
 </script>
@@ -564,7 +713,7 @@ function board(){
     const list=MAJORS.filter(m=>m.tier===t.id);
     return `<div class="row"><div class="tag" style="background:var(--${t.id})"><span class="l">${esc(t.name)}</span><span class="t">${esc(t.title)}</span></div>
     <div class="chips">${list.length?list.map(m=>{const a=AR[m.trend]||AR.flat;
-      return `<button type="button" class="chip" style="--n:${n++}" data-id="${esc(m.id)}" aria-label="${esc(m.name)}, ${esc(t.name)} 티어, ${a[2]}${m.contract?', 계약학과 있음':''}">${esc(m.name)}${ico(a[0],a[1])}${m.contract?'<span class="pin"></span>':''}</button>`}).join(''):'<span class="note" style="margin:0">해당하는 과가 없어요</span>'}</div></div>`}).join('');
+      return `<button type="button" class="chip" style="--n:${n++}" data-id="${esc(m.id)}" aria-label="${esc(m.name)}, ${esc(t.name)} 티어, ${a[2]}${m.contract?', 계약학과 있음':''}">${ico('heartf','hf')}${esc(m.name)}${ico(a[0],a[1])}${m.contract?'<span class="pin"></span>':''}</button>`}).join(''):'<span class="note" style="margin:0">해당하는 과가 없어요</span>'}</div></div>`}).join('');
 }
 board();setTimeout(()=>$('#board').classList.remove('intro'),1400);
 
@@ -606,49 +755,182 @@ $('#barnote').textContent=M.base||'';
 $('#method').textContent=M.method||'';
 $('#src').innerHTML=(M.sources||[]).map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a></li>`).join('');
 
+/* ===== 관심 과 담기 (이 기기에만 저장) ===== */
+const LS='mt-saved';
+let saved=[];try{saved=(JSON.parse(localStorage.getItem(LS)||'[]')||[]).filter(id=>MAJORS.some(m=>m.id===id))}catch(e){}
+let friend=null;          // 친구가 보낸 목록(주소로 받음)
+let pick=[];              // 비교하려고 고른 과
+let mode=null;            // 'major' | 'list' | 'cmp'
+let cmpIds=[],diffOnly=false,tab='a';
+const byId=id=>MAJORS.find(m=>m.id===id);
+const isSaved=id=>saved.includes(id);
+function persist(){try{localStorage.setItem(LS,JSON.stringify(saved))}catch(e){}dock();marks()}
+function toggleSave(id){saved=isSaved(id)?saved.filter(x=>x!==id):[...saved,id];pick=pick.filter(x=>saved.includes(x)||friend?.includes(x));persist()}
+function marks(){for(const b of document.querySelectorAll('#board .chip'))b.classList.toggle('fav',isSaved(b.dataset.id))}
+function dock(){
+  const d=$('#dock');d.hidden=!saved.length;
+  $('#dockn').textContent=saved.length;
+  $('#dockc').disabled=saved.length<2;
+}
+
+/* ===== 시트 열고 닫기 ===== */
+const isOpen=()=>$('#sheet').classList.contains('on');
+function show(hash){
+  const sh=$('#sheet');
+  if(!isOpen()){sh.offsetWidth;sh.classList.add('on');sh.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
+  $('#card').scrollTop=0;($('#x')||$('#card')).focus({preventScroll:true});
+  if(hash&&location.hash!==hash){try{history.replaceState(null,'',hash)}catch(e){}}
+}
+function close(){
+  if(!isOpen())return;
+  const sh=$('#sheet');sh.classList.remove('on');sh.setAttribute('aria-hidden','true');document.body.style.overflow='';cur=null;mode=null;
+  try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}
+  lastBtn?.focus({preventScroll:true});
+}
+const heartBtn=id=>`<button type="button" class="hrt" data-fav="${esc(id)}" aria-pressed="${isSaved(id)}" aria-label="${isSaved(id)?'관심 과에서 빼기':'관심 과로 담기'}">${ico(isSaved(id)?'heartf':'heart')}<span>${isSaved(id)?'담음':'담기'}</span></button>`;
+const xBtn=`<button type="button" class="x" id="x" aria-label="닫기">${ico('close')}</button>`;
+
+/* ===== 학과 칸 공통 ===== */
+const MATH={high:'수학 많음',mid:'수학 보통',low:'수학 적음'};
+const flags=m=>[m.math&&MATH[m.math],m.grad&&'대학원 많이 감',m.license&&'면허·국가자격'].filter(Boolean);
+const whyOf=m=>(m.why||[]).filter(w=>!/계열 취업률/.test(w));
+const confuseOf=id=>(M.confuse||[]).filter(c=>c.a===id||c.b===id);
+const list=(a,cls='')=>a?.length?`<ul class="${cls}">${a.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'<p class="small">준비 중이에요.</p>';
+
 function open(id){
   const i=order.findIndex(m=>m.id===id);if(i<0)return close();
-  const m=order[i],t=tierOf(m.tier),a=AR[m.trend]||AR.flat,prev=order[i-1],next=order[i+1];cur=id;
+  const m=order[i],t=tierOf(m.tier),a=AR[m.trend]||AR.flat,prev=order[i-1],next=order[i+1];cur=id;mode='major';
   const srcs=(m.src||[]).map(n=>M.sources?.[n]).filter(Boolean);
+  const gr=(M.groups||{})[m.group];
+  const cf=confuseOf(id);
   $('#card').innerHTML=`<div class="grab"></div>
   <div class="head"><div class="big" style="background:var(--${t.id})" aria-label="${esc(t.name)} 티어">${esc(t.name)}</div>
     <div><h3 id="dname">${esc(m.name)}</h3><div class="m"><span>${esc(m.group)} 계열</span><span>${esc(t.title)}</span><span class="${a[1]}">${ico(a[0])}${a[2]}</span>${m.contract?'<span class="chipb"><span class="pin"></span>계약학과 있음</span>':''}</div></div>
-    <button type="button" class="x" id="x" aria-label="닫기">${ico('close')}</button></div>
-  <div class="body">
+    <div class="hx">${heartBtn(id)}${xBtn}</div></div>
+  <div class="tabs" role="tablist" aria-label="보기 방식">
+    <button type="button" role="tab" id="ta" aria-selected="${tab==='a'}" aria-controls="pa">한눈에</button>
+    <button type="button" role="tab" id="tb" aria-selected="${tab==='b'}" aria-controls="pb">깊게 보기</button>
+  </div>
+  <div class="body" id="pa" role="tabpanel" aria-labelledby="ta" ${tab==='a'?'':'hidden'}>
     <p class="one">${esc(m.one)}</p>
+    ${flags(m).length?`<div class="flags">${flags(m).map(f=>`<span>${esc(f)}</span>`).join('')}</div>`:''}
     <div class="sc" aria-label="네 가지 점수">${SC.map(([k,l])=>{const v=Math.max(0,Math.min(5,m.score?.[k]||0));return `<div class="s"><span>${l}</span><span class="tk"><i style="width:${v*20}%;background:var(--${t.id})"></i></span><b>${v}/5</b></div>`}).join('')}</div>
-    <div class="box"><h4>왜 이 자리냐면</h4><ul>${(m.why||[]).map(w=>`<li>${esc(w)}</li>`).join('')||'<li>아직 이유를 정리하지 못했어요.</li>'}</ul></div>
+    <div class="box"><h4>왜 이 자리냐면</h4>${list(whyOf(m))}${gr?`<p class="small" style="margin-top:8px">참고: ${esc(m.group)} 계열 평균 취업률 ${gr}%(교육부·2025). 이 과만의 숫자가 아니라 계열 전체 평균이에요.</p>`:''}</div>
     ${m.risk?`<div class="box risk"><h4>조심할 점</h4><p>${esc(m.risk)}</p></div>`:''}
     ${m.tip?`<div class="box"><h4>살아남는 법</h4><p>${esc(m.tip)}</p></div>`:''}
     ${m.paths?.length?`<div class="box"><h4>갈 수 있는 길</h4><div class="pills">${m.paths.map(p=>`<span>${esc(p)}</span>`).join('')}</div></div>`:''}
     <p class="small">점수는 팀이 자료를 보고 매긴 추정이에요. ‘돈’은 학과별 자료가 없어 계열 평균으로 봤어요.${srcs.length?' 근거: '+srcs.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join(', '):''}</p>
   </div>
+  <div class="body" id="pb" role="tabpanel" aria-labelledby="tb" ${tab==='b'?'':'hidden'}>
+    <div class="box"><h4>대학에서 공통으로 배우는 것</h4>${list(m.learn,'dots')}</div>
+    <div class="box"><h4>고등학교 때 들으면 도움 되는 과목</h4>${m.hs?.length?`<div class="pills">${m.hs.map(p=>`<span>${esc(p)}</span>`).join('')}</div><p class="small" style="margin-top:8px">대학마다 권하는 과목이 달라요. 가고 싶은 대학 입학처 안내를 꼭 확인하세요.</p>`:'<p class="small">준비 중이에요.</p>'}</div>
+    ${m.hard?`<div class="box risk"><h4>이런 사람은 힘들 수 있어요</h4><p>${esc(m.hard)}</p></div>`:''}
+    ${m.parts?.length?`<div class="box"><h4>안에 묶인 학과</h4><dl class="parts">${m.parts.map(p=>`<div><dt>${esc(p.name)}</dt><dd>${esc(p.note)}</dd></div>`).join('')}</dl></div>`:''}
+    ${cf.length?`<div class="box"><h4>헷갈리는 과와 차이</h4><div class="cfs">${cf.map(c=>{const o=byId(c.a===id?c.b:c.a);return o?`<button type="button" class="cf" data-go="${esc(o.id)}"><b>${esc(o.name)}</b><span>${esc(c.text)}</span></button>`:''}).join('')}</div></div>`:''}
+    <p class="small">배우는 것·과목·성향은 대학마다 달라서 대체적인 경향을 적었어요.</p>
+  </div>
   <div class="nav"><button type="button" id="pv" ${prev?'':'disabled'}>${ico('prev')}<span>${prev?esc(prev.name):'처음'}</span></button><button type="button" id="nx" ${next?'':'disabled'}><span>${next?esc(next.name):'끝'}</span>${ico('next')}</button></div>`;
-  const sh=$('#sheet');
-  if(!sh.classList.contains('on')){sh.offsetWidth;sh.classList.add('on');sh.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
-  $('#card').scrollTop=0;$('#x').focus({preventScroll:true});
-  if(location.hash!=='#m-'+id){try{history.replaceState(null,'','#m-'+id)}catch(e){}}
-}
-function close(){
-  const sh=$('#sheet');if(!sh.classList.contains('on'))return;
-  sh.classList.remove('on');sh.setAttribute('aria-hidden','true');document.body.style.overflow='';cur=null;
-  try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}
-  lastBtn?.focus({preventScroll:true});
+  show('#m-'+id);
 }
 const step=d=>{const i=order.findIndex(m=>m.id===cur);if(order[i+d])open(order[i+d].id)};
-$('#board').addEventListener('click',e=>{const b=e.target.closest('.chip');if(b){lastBtn=b;open(b.dataset.id)}});
+function setTab(k){tab=k;$('#ta').setAttribute('aria-selected',k==='a');$('#tb').setAttribute('aria-selected',k==='b');$('#pa').hidden=k!=='a';$('#pb').hidden=k!=='b';$('#card').scrollTop=0}
+
+/* ===== 내 관심 과 목록 + 친구 목록 ===== */
+const row=(m,extra='')=>{const t=tierOf(m.tier);const on=pick.includes(m.id);
+  return `<div class="lr"><button type="button" class="pk" data-pick="${esc(m.id)}" aria-pressed="${on}" aria-label="${esc(m.name)} 비교에 ${on?'넣음':'넣기'}"><span class="ck">${on?ico('check'):''}</span></button>
+  <button type="button" class="ln" data-go="${esc(m.id)}"><span class="hb-t" style="background:var(--${t.id})">${esc(t.name)}</span><span class="lt"><b>${esc(m.name)}</b><span>${esc(m.one)}</span></span></button>${extra}</div>`};
+function openList(){
+  mode='list';cur=null;
+  if(!pick.length)pick=saved.slice(0,3);
+  const mine=saved.map(byId).filter(Boolean);
+  let fr='';
+  if(friend){
+    const both=friend.filter(isSaved),only=friend.filter(id=>!isSaved(id)),meOnly=saved.filter(id=>!friend.includes(id));
+    const grp=(title,ids,add)=>ids.length?`<h5>${title} <span>${ids.length}</span></h5>${ids.map(byId).filter(Boolean).map(m=>row(m,add?`<button type="button" class="add" data-fav="${esc(m.id)}">${ico('heart')}담기</button>`:'')).join('')}`:'';
+    fr=`<div class="box fr"><h4>친구가 보낸 목록</h4>${grp('둘 다 담은 과',both)}${grp('친구만 담은 과',only,true)}${grp('나만 담은 과',meOnly)}
+      <button type="button" class="ghost" id="frx">친구 목록 닫기</button></div>`;
+  }
+  $('#card').innerHTML=`<div class="grab"></div>
+  <div class="head"><div class="big lh">${ico('heartf')}</div><div><h3 id="dname">내 관심 과</h3><div class="m"><span>이 기기에만 저장돼요</span></div></div><div class="hx">${xBtn}</div></div>
+  <div class="body">
+    ${fr}
+    ${mine.length?`<p class="small">비교할 과를 2~3개 고르세요(왼쪽 동그라미).</p><div class="ls">${mine.map(m=>row(m,`<button type="button" class="rm" data-fav="${esc(m.id)}" aria-label="${esc(m.name)} 빼기">${ico('close')}</button>`)).join('')}</div>`
+      :`<p class="empty">아직 담은 과가 없어요. 과를 누르고 <b>담기</b>를 누르면 여기 모여요.</p>`}
+    <div class="acts">
+      <button type="button" class="pri" id="gocmp" ${pick.length<2?'disabled':''}>${ico('cols')}고른 과 나란히 보기${pick.length?` (${pick.length})`:''}</button>
+      <button type="button" class="sec" id="share" ${saved.length?'':'disabled'}>${ico('share')}친구에게 내 목록 보내기</button>
+      <p class="small" id="shmsg" aria-live="polite"></p>
+    </div>
+  </div>`;
+  show('#list');
+}
+async function shareList(){
+  const url=location.origin+location.pathname+'#list='+saved.join(',');
+  const msg=$('#shmsg');
+  try{if(navigator.share){await navigator.share({title:'내 관심 학과',text:`내가 담은 학과 ${saved.length}개야`,url});return}}catch(e){if(e?.name==='AbortError')return}
+  try{await navigator.clipboard.writeText(url);msg.textContent='주소를 복사했어요. 친구에게 붙여 넣어 보내면 돼요.'}
+  catch(e){msg.innerHTML=`이 주소를 길게 눌러 복사하세요:<br><input class="cp" readonly value="${esc(url)}">`;msg.querySelector('input')?.select()}
+}
+
+/* ===== 나란히 비교 ===== */
+function openCmp(ids){
+  cmpIds=ids.filter(byId).slice(0,3);if(cmpIds.length<2)return openList();
+  mode='cmp';cur=null;
+  const ms=cmpIds.map(byId),n=ms.length;
+  const rows=[
+    ['한 줄 결론',m=>esc(m.one)],
+    ...SC.map(([k,l])=>[l,m=>{const v=m.score?.[k]||0,t=tierOf(m.tier);return `<span class="mini"><i style="width:${v*20}%;background:var(--${t.id})"></i></span><b>${v}/5</b>`},m=>m.score?.[k]]),
+    ['추세',m=>{const a=AR[m.trend]||AR.flat;return `<span class="${a[1]}">${ico(a[0])}${a[2]}</span>`},m=>m.trend],
+    ['수학',m=>esc(MATH[m.math]||'-'),m=>m.math],
+    ['대학원',m=>m.grad?'많이 감':'적은 편',m=>!!m.grad],
+    ['면허·국가자격',m=>m.license?'있음':'없음',m=>!!m.license],
+    ['배우는 것',m=>list(m.learn,'dots')],
+    ['도움 되는 고교 과목',m=>esc((m.hs||[]).join(', ')||'-')],
+    ['힘들 수 있는 사람',m=>esc(m.hard||'-')],
+    ['조심할 점',m=>esc(m.risk||'-')],
+    ['갈 수 있는 길',m=>esc((m.paths||[]).join(', '))]
+  ];
+  const body=rows.map(([l,f,key])=>{
+    const same=ms.every(m=>JSON.stringify((key||f)(ms[0]))===JSON.stringify((key||f)(m)));
+    return `<div class="crow${same?' same':''}"><h5>${l}${same?'<span>같음</span>':''}</h5><div class="cells" style="--n:${n}">${ms.map(m=>`<div>${f(m)}</div>`).join('')}</div></div>`}).join('');
+  $('#card').innerHTML=`<div class="grab"></div>
+  <div class="head"><button type="button" class="back" id="back" aria-label="목록으로">${ico('prev')}</button><div><h3 id="dname">나란히 보기</h3><div class="m"><span>${n}개 학과</span></div></div><div class="hx">${xBtn}</div></div>
+  <div class="ctop" style="--n:${n}">${ms.map(m=>{const t=tierOf(m.tier);return `<button type="button" class="cname" data-go="${esc(m.id)}"><span class="hb-t" style="background:var(--${t.id})">${esc(t.name)}</span><b>${esc(m.name)}</b></button>`}).join('')}</div>
+  <div class="body cmp${diffOnly?' diff':''}">
+    <label class="sw"><input type="checkbox" id="diff" ${diffOnly?'checked':''}><span></span>다른 점만 보기</label>
+    ${body}
+    <p class="small">점수는 팀이 매긴 추정이라 1점 차이는 크게 보지 마세요. 배우는 것·과목은 대학마다 달라요.</p>
+  </div>`;
+  show('#list');
+}
+
+/* ===== 이벤트 ===== */
+$('#board').addEventListener('click',e=>{const b=e.target.closest('.chip');if(b){lastBtn=b;tab='a';open(b.dataset.id)}});
 $('#filters').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;group=b.dataset.g;
   for(const x of $('#filters').children)x.setAttribute('aria-pressed',x===b);apply()});
 $('#sheet').addEventListener('click',e=>{
-  if(e.target.id==='sheet'||e.target.closest('#x'))return close();
-  if(e.target.closest('#pv'))step(-1);
-  if(e.target.closest('#nx'))step(1);
+  const T=s=>e.target.closest(s);
+  if(e.target.id==='sheet'||T('#x'))return close();
+  let b;
+  if(b=T('[data-fav]')){toggleSave(b.dataset.fav);if(mode==='major')open(cur);else openList();return}
+  if(b=T('[data-pick]')){const id=b.dataset.pick;pick=pick.includes(id)?pick.filter(x=>x!==id):pick.length>=3?pick:[...pick,id];openList();return}
+  if(b=T('[data-go]')){tab='a';open(b.dataset.go);return}
+  if(T('#ta'))return setTab('a');
+  if(T('#tb'))return setTab('b');
+  if(T('#pv'))return step(-1);
+  if(T('#nx'))return step(1);
+  if(T('#gocmp'))return openCmp(pick);
+  if(T('#back'))return openList();
+  if(T('#share'))return shareList();
+  if(T('#frx')){friend=null;return openList()}
 });
-document.addEventListener('keydown',e=>{if(!cur)return;
+$('#sheet').addEventListener('change',e=>{if(e.target.id==='diff'){diffOnly=e.target.checked;$('.cmp').classList.toggle('diff',diffOnly)}});
+$('#dock').addEventListener('click',e=>{lastBtn=e.target.closest('button');if(e.target.closest('#dockc')){pick=pick.length>=2?pick:saved.slice(0,3);openCmp(pick)}else openList()});
+document.addEventListener('keydown',e=>{if(!isOpen())return;
   if(e.key==='Escape')close();
-  else if(e.key==='ArrowRight')step(1);
-  else if(e.key==='ArrowLeft')step(-1);
-  else if(e.key==='Tab'){const f=[...$('#card').querySelectorAll('button:not(:disabled),a[href]')];if(!f.length)return;
+  else if(mode==='major'&&e.key==='ArrowRight')step(1);
+  else if(mode==='major'&&e.key==='ArrowLeft')step(-1);
+  else if(e.key==='Tab'){const f=[...$('#card').querySelectorAll('button:not(:disabled),a[href],input')].filter(x=>x.offsetParent);if(!f.length)return;
     const first=f[0],last=f[f.length-1];
     if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}
     else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}
@@ -656,8 +938,13 @@ document.addEventListener('keydown',e=>{if(!cur)return;
 let y0=null;const card=$('#card');
 card.addEventListener('touchstart',e=>{y0=card.scrollTop<=0?e.touches[0].clientY:null},{passive:true});
 card.addEventListener('touchend',e=>{if(y0!==null&&e.changedTouches[0].clientY-y0>90)close();y0=null},{passive:true});
-const fromHash=()=>{const h=location.hash;if(h.startsWith('#m-'))open(h.slice(3));else close()};
-addEventListener('hashchange',fromHash);fromHash();
+const fromHash=()=>{const h=decodeURIComponent(location.hash);
+  if(h.startsWith('#m-'))open(h.slice(3));
+  else if(h.startsWith('#list=')){const ids=h.slice(6).split(',').filter(byId);friend=ids.length?ids:null;openList()}
+  else if(h==='#list')openList();
+  else close()};
+addEventListener('hashchange',fromHash);
+marks();dock();fromHash();
 if('serviceWorker' in navigator&&location.protocol==='https:')navigator.serviceWorker.register('sw.js').catch(()=>{});
 }
 </script>
